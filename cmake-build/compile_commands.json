@@ -1,0 +1,8 @@
+[
+{
+  "directory": "D:/Program/SDL3-minesweeper/cmake-build",
+  "command": "D:\\mingw64\\bin\\gcc.exe  @CMakeFiles/hello.dir/includes_C.rsp -g -o CMakeFiles\\hello.dir\\hello.c.obj -c D:\\Program\\SDL3-minesweeper\\hello.c",
+  "file": "D:/Program/SDL3-minesweeper/hello.c",
+  "output": "CMakeFiles/hello.dir/hello.c.obj"
+}
+]
