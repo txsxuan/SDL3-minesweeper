@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.20)
 set(SDL3_DLIB_DIR "D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/bin" CACHE PATH "Path to SDL3.dll")
-project(hello)
+project(minesweeper
+
+)
 macro(CopyDLL target_name)
     if(WIN32)
         add_custom_command(
@@ -8,17 +10,15 @@ macro(CopyDLL target_name)
         )
     endif()
 endmacro()
-# set the output directory for built objects.
-# This makes sure that the dynamic library goes into the build directory automatically.
-# set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/$<CONFIGURATION>")
-# set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/$<CONFIGURATION>")
-
-# This assumes the SDL source is available in vendored/SDL
 
 include("SDL3-3.2.10-mingw/cmake/SDL3Config.cmake")
 
+aux_source_directory(src SRC)
 # Create your game executable target as usual
-add_executable(hello WIN32 hello.c)
-CopyDLL(hello)
+add_executable(minesweeper ${SRC})
+
 # Link to the actual SDL3 library.
-target_link_libraries(hello PRIVATE SDL3::SDL3)
+target_include_directories(minesweeper PRIVATE include)
+target_link_libraries(minesweeper PRIVATE SDL3::SDL3)
+target_compile_features(minesweeper PRIVATE cxx_std_20)
+CopyDLL(minesweeper)

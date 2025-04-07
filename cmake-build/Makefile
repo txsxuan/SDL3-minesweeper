@@ -116,41 +116,65 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named hello
+# Target rules for targets named minesweeper
 
 # Build rule for target.
-hello: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 hello
-.PHONY : hello
+minesweeper: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 minesweeper
+.PHONY : minesweeper
 
 # fast build rule for target.
-hello/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/build
-.PHONY : hello/fast
+minesweeper/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\minesweeper.dir\build.make CMakeFiles/minesweeper.dir/build
+.PHONY : minesweeper/fast
 
-hello.obj: hello.c.obj
-.PHONY : hello.obj
+src/hello.obj: src/hello.c.obj
+.PHONY : src/hello.obj
 
 # target to build an object file
-hello.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/hello.c.obj
-.PHONY : hello.c.obj
+src/hello.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\minesweeper.dir\build.make CMakeFiles/minesweeper.dir/src/hello.c.obj
+.PHONY : src/hello.c.obj
 
-hello.i: hello.c.i
-.PHONY : hello.i
+src/hello.i: src/hello.c.i
+.PHONY : src/hello.i
 
 # target to preprocess a source file
-hello.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/hello.c.i
-.PHONY : hello.c.i
+src/hello.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\minesweeper.dir\build.make CMakeFiles/minesweeper.dir/src/hello.c.i
+.PHONY : src/hello.c.i
 
-hello.s: hello.c.s
-.PHONY : hello.s
+src/hello.s: src/hello.c.s
+.PHONY : src/hello.s
 
 # target to generate assembly for a file
-hello.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/hello.c.s
-.PHONY : hello.c.s
+src/hello.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\minesweeper.dir\build.make CMakeFiles/minesweeper.dir/src/hello.c.s
+.PHONY : src/hello.c.s
+
+src/main.obj: src/main.cpp.obj
+.PHONY : src/main.obj
+
+# target to build an object file
+src/main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\minesweeper.dir\build.make CMakeFiles/minesweeper.dir/src/main.cpp.obj
+.PHONY : src/main.cpp.obj
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\minesweeper.dir\build.make CMakeFiles/minesweeper.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\minesweeper.dir\build.make CMakeFiles/minesweeper.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -160,10 +184,13 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... hello
-	@echo ... hello.obj
-	@echo ... hello.i
-	@echo ... hello.s
+	@echo ... minesweeper
+	@echo ... src/hello.obj
+	@echo ... src/hello.i
+	@echo ... src/hello.s
+	@echo ... src/main.obj
+	@echo ... src/main.i
+	@echo ... src/main.s
 .PHONY : help
 
 

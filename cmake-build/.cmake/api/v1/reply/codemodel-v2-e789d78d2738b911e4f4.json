@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "hello",
+					"name" : "minesweeper",
 					"targetIndexes" : 
 					[
 						0
@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "hello::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-hello-Debug-5b14b70d34e2af99a9c9.json",
-					"name" : "hello",
+					"id" : "minesweeper::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-minesweeper-Debug-c566b4a6957f2f633d6f.json",
+					"name" : "minesweeper",
 					"projectIndex" : 0
 				}
 			]
