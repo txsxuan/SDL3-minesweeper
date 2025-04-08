@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.20)
 set(SDL3_DLIB_DIR "D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/bin" CACHE PATH "Path to SDL3.dll")
-project(minesweeper
-
-)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+set(CMAKE_CXX_COMPILER "D:/mingw64/bin/g++.exe")
+project(minesweeper)
 macro(CopyDLL target_name)
     if(WIN32)
         add_custom_command(
@@ -21,4 +21,20 @@ add_executable(minesweeper ${SRC})
 target_include_directories(minesweeper PRIVATE include)
 target_link_libraries(minesweeper PRIVATE SDL3::SDL3)
 target_compile_features(minesweeper PRIVATE cxx_std_20)
+
+# add_custom_target(copy_compile_commands ALL
+#     COMMAND ${CMAKE_COMMAND} -E copy_if_different
+#     ${CMAKE_BINARY_DIR}/compile_commands.json
+#     ${CMAKE_SOURCE_DIR}/compile_commands.json
+#     COMMENT "Copying compile_commands.json to root"
+# )
+message("${PROJECT_NAME} ${CMAKE_BINARY_DIR} ${CMAKE_SOURCE_DIR}")
+if(EXISTS "${CMAKE_BINARY_DIR}/compile_commands.json")
+    execute_process(
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        ${CMAKE_BINARY_DIR}/compile_commands.json
+        ${CMAKE_SOURCE_DIR}/compile_commands.json
+    )
+endif()
+
 CopyDLL(minesweeper)

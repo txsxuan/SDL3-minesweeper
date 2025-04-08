@@ -128,6 +128,54 @@ minesweeper/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\minesweeper.dir\build.make CMakeFiles/minesweeper.dir/build
 .PHONY : minesweeper/fast
 
+src/callback.obj: src/callback.cpp.obj
+.PHONY : src/callback.obj
+
+# target to build an object file
+src/callback.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\minesweeper.dir\build.make CMakeFiles/minesweeper.dir/src/callback.cpp.obj
+.PHONY : src/callback.cpp.obj
+
+src/callback.i: src/callback.cpp.i
+.PHONY : src/callback.i
+
+# target to preprocess a source file
+src/callback.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\minesweeper.dir\build.make CMakeFiles/minesweeper.dir/src/callback.cpp.i
+.PHONY : src/callback.cpp.i
+
+src/callback.s: src/callback.cpp.s
+.PHONY : src/callback.s
+
+# target to generate assembly for a file
+src/callback.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\minesweeper.dir\build.make CMakeFiles/minesweeper.dir/src/callback.cpp.s
+.PHONY : src/callback.cpp.s
+
+src/context.obj: src/context.cpp.obj
+.PHONY : src/context.obj
+
+# target to build an object file
+src/context.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\minesweeper.dir\build.make CMakeFiles/minesweeper.dir/src/context.cpp.obj
+.PHONY : src/context.cpp.obj
+
+src/context.i: src/context.cpp.i
+.PHONY : src/context.i
+
+# target to preprocess a source file
+src/context.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\minesweeper.dir\build.make CMakeFiles/minesweeper.dir/src/context.cpp.i
+.PHONY : src/context.cpp.i
+
+src/context.s: src/context.cpp.s
+.PHONY : src/context.s
+
+# target to generate assembly for a file
+src/context.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\minesweeper.dir\build.make CMakeFiles/minesweeper.dir/src/context.cpp.s
+.PHONY : src/context.cpp.s
+
 src/hello.obj: src/hello.c.obj
 .PHONY : src/hello.obj
 
@@ -152,30 +200,6 @@ src/hello.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\minesweeper.dir\build.make CMakeFiles/minesweeper.dir/src/hello.c.s
 .PHONY : src/hello.c.s
 
-src/main.obj: src/main.cpp.obj
-.PHONY : src/main.obj
-
-# target to build an object file
-src/main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\minesweeper.dir\build.make CMakeFiles/minesweeper.dir/src/main.cpp.obj
-.PHONY : src/main.cpp.obj
-
-src/main.i: src/main.cpp.i
-.PHONY : src/main.i
-
-# target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\minesweeper.dir\build.make CMakeFiles/minesweeper.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
-
-src/main.s: src/main.cpp.s
-.PHONY : src/main.s
-
-# target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\minesweeper.dir\build.make CMakeFiles/minesweeper.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -185,12 +209,15 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... minesweeper
+	@echo ... src/callback.obj
+	@echo ... src/callback.i
+	@echo ... src/callback.s
+	@echo ... src/context.obj
+	@echo ... src/context.i
+	@echo ... src/context.s
 	@echo ... src/hello.obj
 	@echo ... src/hello.i
 	@echo ... src/hello.s
-	@echo ... src/main.obj
-	@echo ... src/main.i
-	@echo ... src/main.s
 .PHONY : help
 
 

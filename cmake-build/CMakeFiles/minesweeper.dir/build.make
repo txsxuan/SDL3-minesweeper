@@ -68,11 +68,41 @@ include CMakeFiles/minesweeper.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/minesweeper.dir/flags.make
 
+CMakeFiles/minesweeper.dir/src/callback.cpp.obj: CMakeFiles/minesweeper.dir/flags.make
+CMakeFiles/minesweeper.dir/src/callback.cpp.obj: CMakeFiles/minesweeper.dir/includes_CXX.rsp
+CMakeFiles/minesweeper.dir/src/callback.cpp.obj: D:/Program/SDL3-minesweeper/src/callback.cpp
+CMakeFiles/minesweeper.dir/src/callback.cpp.obj: CMakeFiles/minesweeper.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Program\SDL3-minesweeper\cmake-build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/minesweeper.dir/src/callback.cpp.obj"
+	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/minesweeper.dir/src/callback.cpp.obj -MF CMakeFiles\minesweeper.dir\src\callback.cpp.obj.d -o CMakeFiles\minesweeper.dir\src\callback.cpp.obj -c D:\Program\SDL3-minesweeper\src\callback.cpp
+
+CMakeFiles/minesweeper.dir/src/callback.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/minesweeper.dir/src/callback.cpp.i"
+	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Program\SDL3-minesweeper\src\callback.cpp > CMakeFiles\minesweeper.dir\src\callback.cpp.i
+
+CMakeFiles/minesweeper.dir/src/callback.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/minesweeper.dir/src/callback.cpp.s"
+	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Program\SDL3-minesweeper\src\callback.cpp -o CMakeFiles\minesweeper.dir\src\callback.cpp.s
+
+CMakeFiles/minesweeper.dir/src/context.cpp.obj: CMakeFiles/minesweeper.dir/flags.make
+CMakeFiles/minesweeper.dir/src/context.cpp.obj: CMakeFiles/minesweeper.dir/includes_CXX.rsp
+CMakeFiles/minesweeper.dir/src/context.cpp.obj: D:/Program/SDL3-minesweeper/src/context.cpp
+CMakeFiles/minesweeper.dir/src/context.cpp.obj: CMakeFiles/minesweeper.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Program\SDL3-minesweeper\cmake-build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/minesweeper.dir/src/context.cpp.obj"
+	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/minesweeper.dir/src/context.cpp.obj -MF CMakeFiles\minesweeper.dir\src\context.cpp.obj.d -o CMakeFiles\minesweeper.dir\src\context.cpp.obj -c D:\Program\SDL3-minesweeper\src\context.cpp
+
+CMakeFiles/minesweeper.dir/src/context.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/minesweeper.dir/src/context.cpp.i"
+	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Program\SDL3-minesweeper\src\context.cpp > CMakeFiles\minesweeper.dir\src\context.cpp.i
+
+CMakeFiles/minesweeper.dir/src/context.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/minesweeper.dir/src/context.cpp.s"
+	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Program\SDL3-minesweeper\src\context.cpp -o CMakeFiles\minesweeper.dir\src\context.cpp.s
+
 CMakeFiles/minesweeper.dir/src/hello.c.obj: CMakeFiles/minesweeper.dir/flags.make
 CMakeFiles/minesweeper.dir/src/hello.c.obj: CMakeFiles/minesweeper.dir/includes_C.rsp
 CMakeFiles/minesweeper.dir/src/hello.c.obj: D:/Program/SDL3-minesweeper/src/hello.c
 CMakeFiles/minesweeper.dir/src/hello.c.obj: CMakeFiles/minesweeper.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Program\SDL3-minesweeper\cmake-build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/minesweeper.dir/src/hello.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Program\SDL3-minesweeper\cmake-build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/minesweeper.dir/src/hello.c.obj"
 	D:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minesweeper.dir/src/hello.c.obj -MF CMakeFiles\minesweeper.dir\src\hello.c.obj.d -o CMakeFiles\minesweeper.dir\src\hello.c.obj -c D:\Program\SDL3-minesweeper\src\hello.c
 
 CMakeFiles/minesweeper.dir/src/hello.c.i: cmake_force
@@ -83,37 +113,24 @@ CMakeFiles/minesweeper.dir/src/hello.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/minesweeper.dir/src/hello.c.s"
 	D:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Program\SDL3-minesweeper\src\hello.c -o CMakeFiles\minesweeper.dir\src\hello.c.s
 
-CMakeFiles/minesweeper.dir/src/main.cpp.obj: CMakeFiles/minesweeper.dir/flags.make
-CMakeFiles/minesweeper.dir/src/main.cpp.obj: CMakeFiles/minesweeper.dir/includes_CXX.rsp
-CMakeFiles/minesweeper.dir/src/main.cpp.obj: D:/Program/SDL3-minesweeper/src/main.cpp
-CMakeFiles/minesweeper.dir/src/main.cpp.obj: CMakeFiles/minesweeper.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Program\SDL3-minesweeper\cmake-build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/minesweeper.dir/src/main.cpp.obj"
-	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/minesweeper.dir/src/main.cpp.obj -MF CMakeFiles\minesweeper.dir\src\main.cpp.obj.d -o CMakeFiles\minesweeper.dir\src\main.cpp.obj -c D:\Program\SDL3-minesweeper\src\main.cpp
-
-CMakeFiles/minesweeper.dir/src/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/minesweeper.dir/src/main.cpp.i"
-	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Program\SDL3-minesweeper\src\main.cpp > CMakeFiles\minesweeper.dir\src\main.cpp.i
-
-CMakeFiles/minesweeper.dir/src/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/minesweeper.dir/src/main.cpp.s"
-	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Program\SDL3-minesweeper\src\main.cpp -o CMakeFiles\minesweeper.dir\src\main.cpp.s
-
 # Object files for target minesweeper
 minesweeper_OBJECTS = \
-"CMakeFiles/minesweeper.dir/src/hello.c.obj" \
-"CMakeFiles/minesweeper.dir/src/main.cpp.obj"
+"CMakeFiles/minesweeper.dir/src/callback.cpp.obj" \
+"CMakeFiles/minesweeper.dir/src/context.cpp.obj" \
+"CMakeFiles/minesweeper.dir/src/hello.c.obj"
 
 # External object files for target minesweeper
 minesweeper_EXTERNAL_OBJECTS =
 
+minesweeper.exe: CMakeFiles/minesweeper.dir/src/callback.cpp.obj
+minesweeper.exe: CMakeFiles/minesweeper.dir/src/context.cpp.obj
 minesweeper.exe: CMakeFiles/minesweeper.dir/src/hello.c.obj
-minesweeper.exe: CMakeFiles/minesweeper.dir/src/main.cpp.obj
 minesweeper.exe: CMakeFiles/minesweeper.dir/build.make
 minesweeper.exe: D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/lib/libSDL3.dll.a
 minesweeper.exe: CMakeFiles/minesweeper.dir/linkLibs.rsp
 minesweeper.exe: CMakeFiles/minesweeper.dir/objects1.rsp
 minesweeper.exe: CMakeFiles/minesweeper.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\Program\SDL3-minesweeper\cmake-build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable minesweeper.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\Program\SDL3-minesweeper\cmake-build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable minesweeper.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\minesweeper.dir\link.txt --verbose=$(VERBOSE)
 	"C:\Program Files\CMake\bin\cmake.exe" -E copy D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/bin/SDL3.dll D:/Program/SDL3-minesweeper/cmake-build
 

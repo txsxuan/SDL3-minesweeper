@@ -1,8 +1,10 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/minesweeper.dir/src/callback.cpp.obj"
+  "CMakeFiles/minesweeper.dir/src/callback.cpp.obj.d"
+  "CMakeFiles/minesweeper.dir/src/context.cpp.obj"
+  "CMakeFiles/minesweeper.dir/src/context.cpp.obj.d"
   "CMakeFiles/minesweeper.dir/src/hello.c.obj"
   "CMakeFiles/minesweeper.dir/src/hello.c.obj.d"
-  "CMakeFiles/minesweeper.dir/src/main.cpp.obj"
-  "CMakeFiles/minesweeper.dir/src/main.cpp.obj.d"
   "libminesweeper.dll.a"
   "minesweeper.exe"
   "minesweeper.exe.manifest"
