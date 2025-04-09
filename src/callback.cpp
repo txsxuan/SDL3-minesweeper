@@ -1,4 +1,5 @@
 #include "context.hpp"
+#include <SDL3/SDL_main.h>
 extern "C" SDL_AppResult SDL_AppInit(void **appstate, int argc, char *argv[]){
     return Context::Init();
 }

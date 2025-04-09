@@ -1,25 +1,81 @@
 CMakeFiles/minesweeper.dir/src/callback.cpp.obj: \
  D:\Program\SDL3-minesweeper\src\callback.cpp \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/iostream \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/requires_hosted.h \
+ D:/Program/SDL3-minesweeper/include/context.hpp \
+ D:/Program/SDL3-minesweeper/include/Matrix.hpp \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/memory \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/memoryfwd.h \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/pstl/pstl_config.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/ostream \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/ios \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/iosfwd \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/stringfwd.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/memoryfwd.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/postypes.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/cwchar \
- D:/mingw64/x86_64-w64-mingw32/include/wchar.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/allocator.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/new_allocator.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/new \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/exception.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/version.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/functexcept.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/exception_defines.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/move.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/type_traits \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/stl_tempbuf.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/stl_construct.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/stl_iterator_base_types.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/iterator_concepts.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/concepts \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/ptr_traits.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/ranges_cmp.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/stl_iterator_base_funcs.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/concept_check.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/debug/assertions.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/stl_pair.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/utility.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/compare \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/ext/numeric_traits.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/cpp_type_traits.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/ext/type_traits.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/stl_uninitialized.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/stl_algobase.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/stl_iterator.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/debug/debug.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/predefined_ops.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bit \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/ext/alloc_traits.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/alloc_traits.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/stl_raw_storage_iter.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/align.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/stdint.h \
+ D:/mingw64/x86_64-w64-mingw32/include/stdint.h \
+ D:/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
  D:/mingw64/x86_64-w64-mingw32/include/corecrt.h \
  D:/mingw64/x86_64-w64-mingw32/include/_mingw.h \
  D:/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
  D:/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
  D:/mingw64/x86_64-w64-mingw32/include/vadefs.h \
  D:/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/stddef.h \
+ D:/mingw64/x86_64-w64-mingw32/include/stddef.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/uses_allocator.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/unique_ptr.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/tuple \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/invoke.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/ranges_util.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/ranges_base.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/initializer_list \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/max_size_type.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/numbers \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/stl_function.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/backward/binders.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/functional_hash.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/hash_bytes.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/ostream \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/requires_hosted.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/ios \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/iosfwd \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/stringfwd.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/postypes.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/cwchar \
+ D:/mingw64/x86_64-w64-mingw32/include/wchar.h \
  D:/mingw64/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
  D:/mingw64/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
  D:/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -27,31 +83,11 @@ CMakeFiles/minesweeper.dir/src/callback.cpp.obj: \
  D:/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
  D:/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/exception \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/exception.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/version.h \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/exception_ptr.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/exception_defines.h \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/cxxabi_init_exception.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/stddef.h \
- D:/mingw64/x86_64-w64-mingw32/include/stddef.h \
- D:/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/typeinfo \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/hash_bytes.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/new \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/move.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/type_traits \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/nested_exception.h \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/char_traits.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/compare \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/concepts \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/stl_construct.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/stl_iterator_base_types.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/iterator_concepts.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/ptr_traits.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/ranges_cmp.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/stl_iterator_base_funcs.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/concept_check.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/debug/assertions.h \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/localefwd.h \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/clocale \
@@ -80,36 +116,12 @@ CMakeFiles/minesweeper.dir/src/callback.cpp.obj: \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/locale_classes.h \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/string \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/allocator.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/new_allocator.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/functexcept.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/cpp_type_traits.h \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/ostream_insert.h \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/cxxabi_forced.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/stl_iterator.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/ext/type_traits.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/stl_function.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/backward/binders.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/ext/numeric_traits.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/stl_algobase.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/stl_pair.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/utility.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/debug/debug.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/predefined_ops.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bit \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/refwrap.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/invoke.h \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/range_access.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/initializer_list \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/basic_string.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/ext/alloc_traits.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/alloc_traits.h \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/string_view \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/functional_hash.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/ranges_base.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/max_size_type.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/numbers \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/string_view.tcc \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/ext/string_conversions.h \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/cstdio \
@@ -118,10 +130,7 @@ CMakeFiles/minesweeper.dir/src/callback.cpp.obj: \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/basic_string.tcc \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/memory_resource.h \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/cstddef \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/uses_allocator.h \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/uses_allocator_args.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/tuple \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/ranges_util.h \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/locale_classes.tcc \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/system_error \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/x86_64-w64-mingw32/bits/error_constants.h \
@@ -138,5 +147,97 @@ CMakeFiles/minesweeper.dir/src/callback.cpp.obj: \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/locale_facets.tcc \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/basic_ios.tcc \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/ostream.tcc \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/istream \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/istream.tcc
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/shared_ptr.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/shared_ptr_base.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/allocated_ptr.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/ext/aligned_buffer.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/ext/concurrence.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/shared_ptr_atomic.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/atomic_base.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/atomic_lockfree_defines.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/atomic_wait.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/cstdint \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/std_mutex.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/backward/auto_ptr.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/ranges_uninitialized.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/ranges_algobase.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/pstl/glue_memory_defs.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/pstl/execution_defs.h \
+ D:/Program/SDL3-minesweeper/include/Renderer.hpp \
+ D:/Program/SDL3-minesweeper/include/pch.hpp \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_stdinc.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_platform_defines.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/stdarg.h \
+ D:/mingw64/x86_64-w64-mingw32/include/stdarg.h \
+ D:/mingw64/x86_64-w64-mingw32/include/_mingw_stdarg.h \
+ D:/mingw64/x86_64-w64-mingw32/include/string.h \
+ D:/mingw64/x86_64-w64-mingw32/include/sec_api/string_s.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_begin_code.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_close_code.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_assert.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_asyncio.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_atomic.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_audio.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_endian.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_error.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_mutex.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_thread.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_properties.h \
+ D:/mingw64/x86_64-w64-mingw32/include/process.h \
+ D:/mingw64/x86_64-w64-mingw32/include/corecrt_startup.h \
+ D:/mingw64/x86_64-w64-mingw32/include/sys/types.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_iostream.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_bits.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_blendmode.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_camera.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_pixels.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_surface.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_rect.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_clipboard.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_cpuinfo.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_dialog.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_video.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_events.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_gamepad.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_guid.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_joystick.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_power.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_sensor.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_keyboard.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_keycode.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_scancode.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_mouse.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_pen.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_touch.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_filesystem.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_gpu.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_haptic.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_hidapi.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_hints.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_init.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_loadso.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_locale.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_log.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_messagebox.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_metal.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_misc.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_platform.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_process.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_render.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_storage.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_system.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_time.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_timer.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_tray.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_version.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_oldnames.h \
+ D:/mingw64/x86_64-w64-mingw32/include/assert.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/ctime \
+ D:/mingw64/x86_64-w64-mingw32/include/time.h \
+ D:/mingw64/x86_64-w64-mingw32/include/_timeval.h \
+ D:/mingw64/x86_64-w64-mingw32/include/pthread_time.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3_image-3.2.4/x86_64-w64-mingw32/include/SDL3_image/SDL_image.h \
+ D:/Program/SDL3-minesweeper/include/Window.hpp \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_main.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_main_impl.h

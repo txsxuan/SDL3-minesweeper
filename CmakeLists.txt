@@ -1,5 +1,9 @@
 cmake_minimum_required(VERSION 3.20)
-set(SDL3_DLIB_DIR "D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/bin" CACHE PATH "Path to SDL3.dll")
+set(SDL3_DIR "D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw" CACHE PATH "Path to SDL3")
+set(SDL3_DLIB_DIR ${SDL3_DIR}"/x86_64-w64-mingw32/bin" CACHE PATH "Path to SDL3.dll")
+set(SDL3_image_DIR "D:/Program/SDL3-minesweeper/3rdlibs/SDL3_image-3.2.4" CACHE PATH "Path to SDL3_image")
+set(SDL3_image_DLIB_DIR ${SDL3_image_DIR}"/x86_64-w64-mingw32/bin" CACHE PATH "Path to SDL3_image.dll")
+
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_CXX_COMPILER "D:/mingw64/bin/g++.exe")
 project(minesweeper)
@@ -11,7 +15,17 @@ macro(CopyDLL target_name)
     endif()
 endmacro()
 
-include("SDL3-3.2.10-mingw/cmake/SDL3Config.cmake")
+macro(CopyLibDLL target_name LibName)
+    if(WIN32)
+        add_custom_command(
+            TARGET ${target_name} POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy "$CACHE{${LibName}_DLIB_DIR}/${LibName}.dll" $<TARGET_FILE_DIR:${target_name}>
+        )
+    endif()
+endmacro()
+
+
+include(${SDL3_DIR}"/cmake/SDL3Config.cmake")
+include(${SDL3_image_DIR}"/cmake/SDL3_imageConfig.cmake")
 
 aux_source_directory(src SRC)
 # Create your game executable target as usual
@@ -19,16 +33,11 @@ add_executable(minesweeper ${SRC})
 
 # Link to the actual SDL3 library.
 target_include_directories(minesweeper PRIVATE include)
-target_link_libraries(minesweeper PRIVATE SDL3::SDL3)
+target_link_libraries(minesweeper PRIVATE SDL3::SDL3 SDL3_image::SDL3_image)
 target_compile_features(minesweeper PRIVATE cxx_std_20)
 
-# add_custom_target(copy_compile_commands ALL
-#     COMMAND ${CMAKE_COMMAND} -E copy_if_different
-#     ${CMAKE_BINARY_DIR}/compile_commands.json
-#     ${CMAKE_SOURCE_DIR}/compile_commands.json
-#     COMMENT "Copying compile_commands.json to root"
-# )
-message("${PROJECT_NAME} ${CMAKE_BINARY_DIR} ${CMAKE_SOURCE_DIR}")
+
+# message("${PROJECT_NAME} ${CMAKE_BINARY_DIR} ${CMAKE_SOURCE_DIR}")
 if(EXISTS "${CMAKE_BINARY_DIR}/compile_commands.json")
     execute_process(
         COMMAND ${CMAKE_COMMAND} -E copy_if_different
@@ -37,4 +46,7 @@ if(EXISTS "${CMAKE_BINARY_DIR}/compile_commands.json")
     )
 endif()
 
+message(${SDL3_DLIB_DIR})
+
 CopyDLL(minesweeper)
+CopyLibDLL(minesweeper SDL3_image)

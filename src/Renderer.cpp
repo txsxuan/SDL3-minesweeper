@@ -1,5 +1,5 @@
 #include "Renderer.hpp"
-#include "SDL3/SDL_error.h"
+#include "SDL3/SDL_render.h"
 #include "Window.hpp"
 #include <stdexcept>
 Renderer::Renderer(const Window& window):renderer_(SDL_CreateRenderer(window.window_.get(),nullptr),RenderDestroy){
@@ -26,12 +26,24 @@ void Renderer::DrawRect(const SDL_FRect &r){
     SDL_RenderRect(renderer_.get(), &r);
 }
 void Renderer::FillRect(const SDL_FRect &r){
-    SDL_RenderRect(renderer_.get(),&r);
+    SDL_RenderFillRect(renderer_.get(),&r);
 }
 void Renderer::DrawTexture(SDL_Texture *texture,const SDL_FRect & srect,float x,float y){
     SDL_FRect drect{.x=x,.y=y,.w=srect.w,.h=srect.h};
     SDL_RenderTexture(renderer_.get(),texture,&srect,&drect);
 }
+void Renderer::DrawTexture(SDL_Texture *texture,float x,float y){
+    SDL_FRect drect{.x=x,.y=y,.w=static_cast<float>(texture->w),.h=static_cast<float>(texture->h)};
+    SDL_RenderTexture(renderer_.get(),texture,nullptr,&drect);
+}
+void Renderer::DrawTexture(SDL_Texture *texture){
+    SDL_RenderTexture(renderer_.get(),texture,nullptr,nullptr);
+}
 void Renderer::Present(){
     SDL_RenderPresent(renderer_.get());
+}
+void Renderer::setScale(float ScaleX,float ScaleY){
+    if(!SDL_SetRenderScale(renderer_.get(), ScaleX,ScaleY)){
+        throw std::runtime_error(std::string("Failed to set Scale")+SDL_GetError());
+    }
 }

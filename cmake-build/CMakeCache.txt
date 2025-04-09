@@ -241,8 +241,17 @@ CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Path to SDL3
+SDL3_DIR:PATH=D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw
+
 //Path to SDL3.dll
-SDL3_DLIB_DIR:PATH=D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/bin
+SDL3_DLIB_DIR:PATH=D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw"/x86_64-w64-mingw32/bin"
+
+//Path to SDL3_image
+SDL3_image_DIR:PATH=D:/Program/SDL3-minesweeper/3rdlibs/SDL3_image-3.2.4
+
+//Path to SDL3_image.dll
+SDL3_image_DLIB_DIR:PATH=D:/Program/SDL3-minesweeper/3rdlibs/SDL3_image-3.2.4"/x86_64-w64-mingw32/bin"
 
 //Value Computed by CMake
 minesweeper_BINARY_DIR:STATIC=D:/Program/SDL3-minesweeper/cmake-build

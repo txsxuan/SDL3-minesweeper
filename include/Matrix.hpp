@@ -9,7 +9,7 @@ public:
     Matrix(const Matrix& other) = delete;
     Matrix& operator=(const Matrix& other)=delete;
     Matrix(Matrix&& other) = default;
-    Matrix&& operator=(Matrix&& other) = default;
+    Matrix& operator=(Matrix&& other) = default;
     void Fill(const T& value) {
         for (int i = 0 ; i < w_ * h_; i++) {
             GetByIndex(i) = value;

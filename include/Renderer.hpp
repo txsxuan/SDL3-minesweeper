@@ -15,7 +15,10 @@ public:
     void DrawRect(const SDL_FRect &);
     void FillRect(const SDL_FRect &);
     void DrawTexture(SDL_Texture *texture,const SDL_FRect & srect,float x,float y);
+    void DrawTexture(SDL_Texture *texture,float x,float y);
+    void DrawTexture(SDL_Texture *texture);
     void Present();
+    void setScale(float ScaleX,float ScaleY);
 private:
     std::unique_ptr<SDL_Renderer,decltype(RenderDestroy)> renderer_=nullptr;
 };

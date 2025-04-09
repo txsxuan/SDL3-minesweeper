@@ -1,94 +1,7 @@
 CMakeFiles/minesweeper.dir/src/context.cpp.obj: \
  D:\Program\SDL3-minesweeper\src\context.cpp \
  D:/Program/SDL3-minesweeper/include/context.hpp \
- D:/Program/SDL3-minesweeper/include/pch.hpp \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_stdinc.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_platform_defines.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/stdarg.h \
- D:/mingw64/x86_64-w64-mingw32/include/stdarg.h \
- D:/mingw64/x86_64-w64-mingw32/include/_mingw_stdarg.h \
- D:/mingw64/x86_64-w64-mingw32/include/vadefs.h \
- D:/mingw64/x86_64-w64-mingw32/include/_mingw.h \
- D:/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
- D:/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
- D:/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/stdint.h \
- D:/mingw64/x86_64-w64-mingw32/include/stdint.h \
- D:/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
- D:/mingw64/x86_64-w64-mingw32/include/corecrt.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/stddef.h \
- D:/mingw64/x86_64-w64-mingw32/include/stddef.h \
- D:/mingw64/x86_64-w64-mingw32/include/string.h \
- D:/mingw64/x86_64-w64-mingw32/include/sec_api/string_s.h \
- D:/mingw64/x86_64-w64-mingw32/include/wchar.h \
- D:/mingw64/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
- D:/mingw64/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
- D:/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
- D:/mingw64/x86_64-w64-mingw32/include/_mingw_stat64.h \
- D:/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
- D:/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_begin_code.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_close_code.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_assert.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_asyncio.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_atomic.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_audio.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_endian.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_error.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_mutex.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_thread.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_properties.h \
- D:/mingw64/x86_64-w64-mingw32/include/process.h \
- D:/mingw64/x86_64-w64-mingw32/include/corecrt_startup.h \
- D:/mingw64/x86_64-w64-mingw32/include/sys/types.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_iostream.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_bits.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_blendmode.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_camera.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_pixels.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_surface.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_rect.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_clipboard.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_cpuinfo.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_dialog.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_video.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_events.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_gamepad.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_guid.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_joystick.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_power.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_sensor.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_keyboard.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_keycode.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_scancode.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_mouse.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_pen.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_touch.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_filesystem.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_gpu.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_haptic.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_hidapi.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_hints.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_init.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_loadso.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_locale.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_log.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_messagebox.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_metal.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_misc.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_platform.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_process.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_render.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_storage.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_system.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_time.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_timer.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_tray.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_version.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_oldnames.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_main.h \
- D:/Program/SDL3-minesweeper/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_main_impl.h \
+ D:/Program/SDL3-minesweeper/include/Matrix.hpp \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/memory \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/memoryfwd.h \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
@@ -131,6 +44,17 @@ CMakeFiles/minesweeper.dir/src/context.cpp.obj: \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/alloc_traits.h \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/stl_raw_storage_iter.h \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/align.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/stdint.h \
+ D:/mingw64/x86_64-w64-mingw32/include/stdint.h \
+ D:/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
+ D:/mingw64/x86_64-w64-mingw32/include/corecrt.h \
+ D:/mingw64/x86_64-w64-mingw32/include/_mingw.h \
+ D:/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
+ D:/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
+ D:/mingw64/x86_64-w64-mingw32/include/vadefs.h \
+ D:/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/stddef.h \
+ D:/mingw64/x86_64-w64-mingw32/include/stddef.h \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/uses_allocator.h \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/unique_ptr.h \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/tuple \
@@ -151,6 +75,13 @@ CMakeFiles/minesweeper.dir/src/context.cpp.obj: \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/stringfwd.h \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/postypes.h \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/cwchar \
+ D:/mingw64/x86_64-w64-mingw32/include/wchar.h \
+ D:/mingw64/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
+ D:/mingw64/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
+ D:/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
+ D:/mingw64/x86_64-w64-mingw32/include/_mingw_stat64.h \
+ D:/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
+ D:/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/exception \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/exception_ptr.h \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/cxxabi_init_exception.h \
@@ -231,4 +162,83 @@ CMakeFiles/minesweeper.dir/src/context.cpp.obj: \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/ranges_uninitialized.h \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/ranges_algobase.h \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/pstl/glue_memory_defs.h \
- D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/pstl/execution_defs.h
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/pstl/execution_defs.h \
+ D:/Program/SDL3-minesweeper/include/Renderer.hpp \
+ D:/Program/SDL3-minesweeper/include/pch.hpp \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_stdinc.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_platform_defines.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/stdarg.h \
+ D:/mingw64/x86_64-w64-mingw32/include/stdarg.h \
+ D:/mingw64/x86_64-w64-mingw32/include/_mingw_stdarg.h \
+ D:/mingw64/x86_64-w64-mingw32/include/string.h \
+ D:/mingw64/x86_64-w64-mingw32/include/sec_api/string_s.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_begin_code.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_close_code.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_assert.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_asyncio.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_atomic.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_audio.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_endian.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_error.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_mutex.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_thread.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_properties.h \
+ D:/mingw64/x86_64-w64-mingw32/include/process.h \
+ D:/mingw64/x86_64-w64-mingw32/include/corecrt_startup.h \
+ D:/mingw64/x86_64-w64-mingw32/include/sys/types.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_iostream.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_bits.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_blendmode.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_camera.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_pixels.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_surface.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_rect.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_clipboard.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_cpuinfo.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_dialog.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_video.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_events.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_gamepad.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_guid.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_joystick.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_power.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_sensor.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_keyboard.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_keycode.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_scancode.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_mouse.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_pen.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_touch.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_filesystem.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_gpu.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_haptic.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_hidapi.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_hints.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_init.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_loadso.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_locale.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_log.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_messagebox.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_metal.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_misc.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_platform.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_process.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_render.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_storage.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_system.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_time.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_timer.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_tray.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_version.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_oldnames.h \
+ D:/mingw64/x86_64-w64-mingw32/include/assert.h \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/ctime \
+ D:/mingw64/x86_64-w64-mingw32/include/time.h \
+ D:/mingw64/x86_64-w64-mingw32/include/_timeval.h \
+ D:/mingw64/x86_64-w64-mingw32/include/pthread_time.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3_image-3.2.4/x86_64-w64-mingw32/include/SDL3_image/SDL_image.h \
+ D:/Program/SDL3-minesweeper/include/Window.hpp \
+ D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/cassert \
+ D:/mingw64/x86_64-w64-mingw32/include/sys/stat.h \
+ D:/mingw64/x86_64-w64-mingw32/include/io.h
