@@ -36,7 +36,7 @@ target_include_directories(minesweeper PRIVATE include)
 target_link_libraries(minesweeper PRIVATE SDL3::SDL3 SDL3_image::SDL3_image)
 target_compile_features(minesweeper PRIVATE cxx_std_20)
 
-
+target_precompile_headers(minesweeper PRIVATE "include/pch.hpp")
 # message("${PROJECT_NAME} ${CMAKE_BINARY_DIR} ${CMAKE_SOURCE_DIR}")
 if(EXISTS "${CMAKE_BINARY_DIR}/compile_commands.json")
     execute_process(

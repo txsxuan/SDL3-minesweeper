@@ -8,10 +8,16 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "D:/Program/SDL3-minesweeper/cmake-build/CMakeFiles/minesweeper.dir/cmake_pch.hxx.cxx" "CMakeFiles/minesweeper.dir/cmake_pch.hxx.gch" "gcc" "CMakeFiles/minesweeper.dir/cmake_pch.hxx.gch.d"
+  "D:/Program/SDL3-minesweeper/cmake-build/CMakeFiles/minesweeper.dir/cmake_pch.hxx" "CMakeFiles/minesweeper.dir/cmake_pch.hxx.gch" "gcc" "CMakeFiles/minesweeper.dir/cmake_pch.hxx.gch.d"
   "D:/Program/SDL3-minesweeper/src/Renderer.cpp" "CMakeFiles/minesweeper.dir/src/Renderer.cpp.obj" "gcc" "CMakeFiles/minesweeper.dir/src/Renderer.cpp.obj.d"
+  "D:/Program/SDL3-minesweeper/cmake-build/CMakeFiles/minesweeper.dir/cmake_pch.hxx" "CMakeFiles/minesweeper.dir/src/Renderer.cpp.obj" "gcc" "CMakeFiles/minesweeper.dir/src/Renderer.cpp.obj.d"
   "D:/Program/SDL3-minesweeper/src/Window.cpp" "CMakeFiles/minesweeper.dir/src/Window.cpp.obj" "gcc" "CMakeFiles/minesweeper.dir/src/Window.cpp.obj.d"
+  "D:/Program/SDL3-minesweeper/cmake-build/CMakeFiles/minesweeper.dir/cmake_pch.hxx" "CMakeFiles/minesweeper.dir/src/Window.cpp.obj" "gcc" "CMakeFiles/minesweeper.dir/src/Window.cpp.obj.d"
   "D:/Program/SDL3-minesweeper/src/callback.cpp" "CMakeFiles/minesweeper.dir/src/callback.cpp.obj" "gcc" "CMakeFiles/minesweeper.dir/src/callback.cpp.obj.d"
+  "D:/Program/SDL3-minesweeper/cmake-build/CMakeFiles/minesweeper.dir/cmake_pch.hxx" "CMakeFiles/minesweeper.dir/src/callback.cpp.obj" "gcc" "CMakeFiles/minesweeper.dir/src/callback.cpp.obj.d"
   "D:/Program/SDL3-minesweeper/src/context.cpp" "CMakeFiles/minesweeper.dir/src/context.cpp.obj" "gcc" "CMakeFiles/minesweeper.dir/src/context.cpp.obj.d"
+  "D:/Program/SDL3-minesweeper/cmake-build/CMakeFiles/minesweeper.dir/cmake_pch.hxx" "CMakeFiles/minesweeper.dir/src/context.cpp.obj" "gcc" "CMakeFiles/minesweeper.dir/src/context.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -1,13 +1,6 @@
 #pragma once
-#include "Matrix.hpp"
+// #include "Matrix.hpp"
 #include "Renderer.hpp"
-#include "SDL3/SDL_events.h"
-#include "SDL3/SDL_pixels.h"
-#include "SDL3/SDL_render.h"
-#include "SDL3/SDL_stdinc.h"
-#include "pch.hpp"
-#include "window.hpp"
-#include <memory>
 
 
 constexpr int NGRIDX = 30;
@@ -20,6 +13,12 @@ constexpr int OFFSCORY = 36;
 constexpr int TileLen=16;
 constexpr int WIDTH = NGRIDX * TileLen+ OFFGRIDX + 8;
 constexpr int HEIGHT = NGRIDY * TileLen + OFFGRIDY + 8;
+
+constexpr int   UNREV=9;
+constexpr int   FLAG=10;
+constexpr int   EXPLODE=14;
+constexpr int   WFLAG=15;
+
 constexpr float scale=2;
 
 constexpr SDL_Color n0xD7D3CE{0xD7, 0xD3, 0xCE,255};
@@ -36,12 +35,6 @@ enum MouseState{
     clickSmile
 
 };
-enum{//用于绘制其他图片
-    UNREV=9,
-    FLAG=10,
-    EXPLODE=14,
-    WFLAG=15,
-};
 enum Tilevalue{
     REV=0,
     BOMB=13,
@@ -54,7 +47,7 @@ struct Tile{
 using Map=Matrix<Tile>;
 
 void Mapinit(const Uint64 bombnums,Map &map,const int x,const int y);
-
+void Mapinit(Map &map);
 inline auto TextureDestroy = [](SDL_Texture* texture) {
     SDL_DestroyTexture(texture);
 };
@@ -68,13 +61,24 @@ struct  Context final{
         Win,
         Explode,
     };
+    struct Mouse{
+        float Posx;
+        float Posy;
+        MouseState Pstate=None;
+        MouseState Mstate=None; 
+        void GetPos(){
+            SDL_GetMouseState(&Posx,&Posy);
+            Posx/=scale;
+            Posy/=scale;
+        }
+    }mouse;
+
     std::unique_ptr<SDL_Texture,decltype(TextureDestroy)> Tilecases; 
     std::unique_ptr<SDL_Texture,decltype(TextureDestroy)> SmileImg;
     std::unique_ptr<SDL_Texture,decltype(TextureDestroy)> Digit;
     std::unique_ptr<SDL_Texture,decltype(TextureDestroy)> background;
     Map map;
     GameState state = NGaming;//最开始的时候，也是计时器开始前
-    MouseState Mstate=None; 
     Window window;
     Renderer renderer;
 
@@ -87,12 +91,14 @@ struct  Context final{
         assert(instance_);
         return *instance_;
     }
-
+      
     void DrawUI();
     void DrawMap();
     void DrawBack();
     void DrawSmile();
     SDL_AppResult EventHandle(SDL_Event *);
+    void MouseHandle(int X,int Y);
+    void floodFill(int X,int Y);
     SDL_AppResult Update();
 
 private:

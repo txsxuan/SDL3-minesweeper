@@ -1,10 +1,6 @@
 #pragma once
-#include "SDL3/SDL_init.h"
-#include "SDL3/SDL_stdinc.h"
-#include "SDL3/SDL_video.h"
-#include "pch.hpp"
-#include <stdexcept>
-#include <string>
+// #include "pch.hpp"
+#include <utility>
 inline auto windowDestroy=[](SDL_Window* window){
     SDL_DestroyWindow(window);
 };
@@ -17,6 +13,7 @@ public:
             throw std::runtime_error(std::string("Failed to set the Alpha of window")+SDL_GetError());
         }
     }
+    std::pair<int, int> GetPos();
 private:
     std::unique_ptr<SDL_Window,decltype(windowDestroy)>  window_=nullptr;
 };

@@ -1,6 +1,5 @@
 #pragma once
 // #include "context.hpp"
-#include "pch.hpp"
 #include "Window.hpp"
 inline auto RenderDestroy=[](SDL_Renderer* renderer){SDL_DestroyRenderer(renderer);};
 class Renderer final{

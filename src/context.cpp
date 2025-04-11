@@ -1,9 +1,12 @@
 #include "context.hpp"
-#include "SDL3/SDL_video.h"
+#include "Matrix.hpp"
+#include "SDL3/SDL_events.h"
+#include "SDL3/SDL_init.h"
+#include "SDL3/SDL_log.h"
+#include "SDL3/SDL_stdinc.h"
+#include "Window.hpp"
 #include <cassert>
-#include <memory>
-#include <stdexcept>
-#include <sys/stat.h>
+#include <setjmp.h>
 SDL_Texture *LoadTexture(SDL_Renderer *Renderer,const std::string& bmpFilename){
     // SDL_Surface *surface=SDL_LoadBMP(bmpFilename.c_str());
     SDL_Surface *surface=IMG_Load(bmpFilename.c_str());
@@ -17,7 +20,17 @@ SDL_Texture *LoadTexture(SDL_Renderer *Renderer,const std::string& bmpFilename){
     SDL_DestroySurface(surface);
     return texture;
 }
-
+void Mapinit(Map &map){
+    int i,j;
+    for(i=0;i<map.Width();i++){
+        for(int j=0;j<map.Height();j++){
+            auto &grid=map.Get(i,j);
+            grid.value=static_cast<Tilevalue>(0);
+            grid.isflag=false;
+            grid.isCover=true;
+        }
+    }
+}
 void Mapinit(const Uint64 bombnums,Map &map,const int x,const int y){
     int i=0;
     if(bombnums>=map.MaxSize()){
@@ -60,12 +73,12 @@ Context::Context(Window &&window_,Renderer &&renderer_):Tilecases(LoadTexture(re
 SDL_AppResult Context::Init(){
     if(!instance_){
         std::srand(std::time(0));
-        if(!SDL_Init(SDL_INIT_EVENTS|SDL_INIT_EVENTS)){
+        if(!SDL_Init(SDL_INIT_EVENTS|SDL_INIT_VIDEO)){
             SDL_Log("Couldn't initialize SDL: %s", SDL_GetError());
             return SDL_APP_FAILURE;
         }
         try{
-            Window window("YukiniSakuHana",WIDTH*scale,HEIGHT*scale);
+            Window window("MineSweeper",WIDTH*scale,HEIGHT*scale);
             window.SetAlpha(240);
             Renderer renderer(window);
             SDL_Log("%d  %d  ",WIDTH,HEIGHT);
@@ -81,19 +94,72 @@ SDL_AppResult Context::Init(){
     return SDL_APP_CONTINUE;
 }
 SDL_AppResult Context::EventHandle(SDL_Event *event){
+    mouse.Posx=event->motion.x/scale;
+    mouse.Posy=event->motion.y/scale;
     if (event->type == SDL_EVENT_KEY_DOWN ||
         event->type == SDL_EVENT_QUIT) {
         return SDL_APP_SUCCESS;  /* end the program, reporting success to the OS. */
     }
+    else {
+        if(mouse.Posy<OFFGRIDY){
+            if(event->type==SDL_EVENT_MOUSE_BUTTON_DOWN){
+                mouse.Mstate=clickSmile;
+                return SDL_APP_CONTINUE;
+            }
+        }
+        // else if(mouse.Posx<OFFGRIDX||mouse.Posy<OFFGRIDY){
+        //     return SDL_APP_CONTINUE;
+        // }
+        int X=static_cast<int>((mouse.Posx-OFFGRIDX)/TileLen);
+        int Y=static_cast<int>((mouse.Posy-OFFGRIDY)/TileLen);
+        // SDL_Log("%f %f %d %d %d %d",mouse.Posx,mouse.Posy,OFFGRIDX,OFFGRIDY,X,Y);
+        if(event->type==SDL_EVENT_MOUSE_BUTTON_DOWN){
+            if(event->button.button==1){
+                if(!map.IsIn(X,Y)){
+                    return SDL_APP_CONTINUE;//很奇怪的逻辑，看起来只有左键受到棋盘的影响
+                }
+            }
+            if(event->button.button==2||(event->button.button==1&&mouse.Mstate==rHold)||(event->button.button==3&&mouse.Mstate==lHold)){
+                mouse.Mstate=dHold;
+                SDL_Log("Double click hold !");
+            }
+            else if(event->button.button==1){
+                mouse.Mstate=lHold;
+                SDL_Log("Left click hold !");
+            }
+            else if(event->button.button==3){
+                if(!map.IsIn(X,Y)){
+                    return SDL_APP_CONTINUE;
+                }
+                map.Get(X,Y).isflag=!(map.Get(X,Y).isflag);
+                mouse.Mstate=rHold;
+                SDL_Log("Right click hold !");
+            }
+            // else{
+            //     SDL_Log("Other buttun clicked down ! : %d",event->button.button);
+            // }
+        }
+        else if(event->type==SDL_EVENT_MOUSE_BUTTON_UP){
+            if(event->button.button==1||event->button.button==2||event->button.button==3){
+                mouse.Pstate=mouse.Mstate;
+                mouse.Mstate=None;
+            }
+            SDL_Log("Release buttun %d",event->button.button);
+
+        }
+    }
     return SDL_APP_CONTINUE;
 }
 SDL_AppResult Context::Update(){
+    // mouse.GetPos();
     renderer.SetColor({255,255,255,255});
     renderer.Clear(); 
-    DrawUI();
+    if(state==NGaming){
+        DrawUI();
+    }
     DrawMap();
     DrawSmile();
-    DrawBack();
+    // DrawBack();
 
     renderer.Present();
     return SDL_APP_CONTINUE;
@@ -107,7 +173,7 @@ void Context::DrawUI(){
     r.y = 0;
     r.w = WIDTH;
     r.h = 20;
-    renderer.SetColor(n0xD7D3CE);
+    renderer.SetColor(n0xFFFFFF);
     renderer.FillRect(r);
     /* Cadre total (pour les bordures blanches) */
     r.x = 0;
@@ -196,13 +262,73 @@ void Context::DrawUI(){
 }
 
 void Context::DrawMap(){
+    SDL_FRect srect{static_cast<float>(Tilecases->w)/16,0,static_cast<float>(Tilecases->w)/16,static_cast<float>(Tilecases->h)};
     for(int i=0;i<NGRIDX;i++){
         for(int j=0;j<NGRIDY;j++){
-            if(map.Get(i,j).isCover==true){
-                SDL_FRect srect{9*static_cast<float>(Tilecases->w)/16,0,static_cast<float>(Tilecases->w)/16,static_cast<float>(Tilecases->h)};
-                float x=i*TileLen+OFFGRIDX;
-                float y=j*TileLen+OFFGRIDY;
-                renderer.DrawTexture(Tilecases.get(), srect, x, y);
+            float x=i*TileLen+OFFGRIDX;
+            float y=j*TileLen+OFFGRIDY;
+            srect.x=static_cast<float>(Tilecases->w)/16;
+            auto const &grid=map.Get(i,j);
+            if(grid.isflag){
+                if(state==Explode&&grid.value==BOMB){
+                    srect.x*=WFLAG;
+                }else{
+                    srect.x*=FLAG;
+                }
+            }
+            else if(grid.isCover==true){
+                if(state==Explode&&grid.value==BOMB){
+                    srect.x*=static_cast<float>(grid.value);
+                }
+                else{
+                    srect.x*=UNREV;
+                }
+            }
+            else{
+                assert(0);
+                if(state==Explode&&grid.value==BOMB){
+                    srect.x*=EXPLODE;
+                }else{
+                    srect.x*=static_cast<float>(grid.value);
+                }
+            }
+            renderer.DrawTexture(Tilecases.get(), srect, x, y);
+        }
+    }
+    // if(mouse.Posx<OFFGRIDX||mouse.Posy<OFFGRIDY){
+    //     return;
+    // }
+    if(mouse.Mstate==lHold){
+        int X=static_cast<int>((mouse.Posx-OFFGRIDX)/TileLen);
+        int Y=static_cast<int>((mouse.Posy-OFFGRIDY)/TileLen);
+        SDL_Log("%f %f %d %d %d %d",mouse.Posx,mouse.Posy,OFFGRIDX,OFFGRIDY,X,Y);
+        if(!map.IsIn(X,Y)){
+            return;
+        }
+        auto const &grid=map.Get(X,Y);
+        if(!grid.isflag&&grid.isCover){
+            srect.x=0;
+            renderer.DrawTexture(Tilecases.get(), srect, X*TileLen+OFFGRIDX, Y*TileLen+OFFGRIDY);
+        }
+    }
+    else if(mouse.Mstate==dHold){
+        int X=static_cast<int>((mouse.Posx-OFFGRIDX)/TileLen);
+        int Y=static_cast<int>((mouse.Posy-OFFGRIDY)/TileLen);
+        SDL_Log("%f %f %d %d %d %d",mouse.Posx,mouse.Posy,OFFGRIDX,OFFGRIDY,X,Y);
+        if(!map.IsIn(X,Y)){
+            return;
+        }
+        for(int i=X-1;i<=X+1;i++){
+            for(int j=Y-1;j<=Y+1;j++){
+                if(!map.IsIn(i,j)){
+                    SDL_Log("asdadsa");
+                    continue;
+                }
+                auto const &grid=map.Get(i,j);
+                if(!grid.isflag&&grid.isCover){
+                    srect.x=0;
+                    renderer.DrawTexture(Tilecases.get(), srect, i*TileLen+OFFGRIDX, j*TileLen+OFFGRIDY);
+                }
             }
         }
     }
@@ -227,15 +353,80 @@ void Context::DrawSmile() {
   else if (state == Explode)
     r.x = r.w * 2;
   else {
-    if (Mstate==clickSmile)
+    if (mouse.Mstate==clickSmile)
       r.x = r.w * 4;
-    else if (Mstate ==None)
+    else if (mouse.Mstate==None)
       r.x = 0;
-    else if (Mstate==lHold||Mstate==rHold||Mstate==dHold) {
+    else if (mouse.Mstate==lHold||mouse.Mstate==rHold||mouse.Mstate==dHold) {
                r.x = r.w * 1;
              }
     else
       r.x = 0;
   }
 renderer.DrawTexture(SmileImg.get(), r,static_cast<float>(WIDTH - SmileImg.get()->h )/ 2, OFFSCORY - 1);
+}
+void Context::MouseHandle(int X,int Y){
+    if(!map.IsIn(X,Y)){
+        return;
+    }
+    auto &grid=map.Get(X,Y);
+    if(mouse.Pstate==lHold){
+        if(state==NGaming){
+            state=Gaming;
+            Mapinit(NMINES, map, X,Y);
+        }
+        if(!grid.isCover||grid.isflag){
+            return;
+        }
+        floodFill(X,Y);
+        
+    }
+    else if(mouse.Pstate==dHold){
+        if(map.Get(X,Y).isCover||grid.isflag){
+            return;
+        }
+        for(int x=X-1;x<=X+1;x++){
+            for(int y=Y-1;y<=Y+1;y++){
+                floodFill(x,y);
+            }
+        }
+    }
+    else if(mouse.Pstate==clickSmile){
+        state=NGaming;
+        hasREV=0;
+        Mapinit(map);
+    }
+    if(hasREV==NMINES){
+        state=Win;
+    }
+}
+void Context::floodFill(int X,int Y){
+    if(!map.IsIn(X,Y)){
+        return;
+    }
+    auto &grid=map.Get(X,Y);
+    if(!grid.isCover||grid.isflag){
+            return;
+        }
+    if(grid.value==BOMB){
+        state=Explode;
+        return ;
+    }
+    else if(grid.value==0){
+        grid.isCover=false;
+        hasREV++;
+        floodFill(X-1,Y-1);
+        floodFill(X-1,Y);
+        floodFill(X-1,Y+1);
+        floodFill(X+1,Y-1);
+        floodFill(X+1,Y);
+        floodFill(X+1,Y+1);
+        floodFill(X,Y-1);
+        floodFill(X,Y+1);
+    }
+    else{
+        grid.isCover=false;
+        hasREV++;
+    }
+
 }

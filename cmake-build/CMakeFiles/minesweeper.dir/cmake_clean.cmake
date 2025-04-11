@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/minesweeper.dir/cmake_pch.hxx.gch"
+  "CMakeFiles/minesweeper.dir/cmake_pch.hxx.gch.d"
   "CMakeFiles/minesweeper.dir/src/Renderer.cpp.obj"
   "CMakeFiles/minesweeper.dir/src/Renderer.cpp.obj.d"
   "CMakeFiles/minesweeper.dir/src/Window.cpp.obj"

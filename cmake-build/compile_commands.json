@@ -1,25 +1,31 @@
 [
 {
   "directory": "D:/Program/SDL3-minesweeper/cmake-build",
-  "command": "D:\\mingw64\\bin\\g++.exe  @CMakeFiles/minesweeper.dir/includes_CXX.rsp -g -std=gnu++20 -o CMakeFiles\\minesweeper.dir\\src\\Renderer.cpp.obj -c D:\\Program\\SDL3-minesweeper\\src\\Renderer.cpp",
+  "command": "D:\\mingw64\\bin\\g++.exe  @CMakeFiles/minesweeper.dir/includes_CXX.rsp -g -std=gnu++20 -Winvalid-pch -x c++-header -include D:/Program/SDL3-minesweeper/cmake-build/CMakeFiles/minesweeper.dir/cmake_pch.hxx -o CMakeFiles\\minesweeper.dir\\cmake_pch.hxx.gch -c D:\\Program\\SDL3-minesweeper\\cmake-build\\CMakeFiles\\minesweeper.dir\\cmake_pch.hxx.cxx",
+  "file": "D:/Program/SDL3-minesweeper/cmake-build/CMakeFiles/minesweeper.dir/cmake_pch.hxx.cxx",
+  "output": "CMakeFiles/minesweeper.dir/cmake_pch.hxx.gch"
+},
+{
+  "directory": "D:/Program/SDL3-minesweeper/cmake-build",
+  "command": "D:\\mingw64\\bin\\g++.exe  @CMakeFiles/minesweeper.dir/includes_CXX.rsp -g -std=gnu++20 -Winvalid-pch -include D:/Program/SDL3-minesweeper/cmake-build/CMakeFiles/minesweeper.dir/cmake_pch.hxx -o CMakeFiles\\minesweeper.dir\\src\\Renderer.cpp.obj -c D:\\Program\\SDL3-minesweeper\\src\\Renderer.cpp",
   "file": "D:/Program/SDL3-minesweeper/src/Renderer.cpp",
   "output": "CMakeFiles/minesweeper.dir/src/Renderer.cpp.obj"
 },
 {
   "directory": "D:/Program/SDL3-minesweeper/cmake-build",
-  "command": "D:\\mingw64\\bin\\g++.exe  @CMakeFiles/minesweeper.dir/includes_CXX.rsp -g -std=gnu++20 -o CMakeFiles\\minesweeper.dir\\src\\Window.cpp.obj -c D:\\Program\\SDL3-minesweeper\\src\\Window.cpp",
+  "command": "D:\\mingw64\\bin\\g++.exe  @CMakeFiles/minesweeper.dir/includes_CXX.rsp -g -std=gnu++20 -Winvalid-pch -include D:/Program/SDL3-minesweeper/cmake-build/CMakeFiles/minesweeper.dir/cmake_pch.hxx -o CMakeFiles\\minesweeper.dir\\src\\Window.cpp.obj -c D:\\Program\\SDL3-minesweeper\\src\\Window.cpp",
   "file": "D:/Program/SDL3-minesweeper/src/Window.cpp",
   "output": "CMakeFiles/minesweeper.dir/src/Window.cpp.obj"
 },
 {
   "directory": "D:/Program/SDL3-minesweeper/cmake-build",
-  "command": "D:\\mingw64\\bin\\g++.exe  @CMakeFiles/minesweeper.dir/includes_CXX.rsp -g -std=gnu++20 -o CMakeFiles\\minesweeper.dir\\src\\callback.cpp.obj -c D:\\Program\\SDL3-minesweeper\\src\\callback.cpp",
+  "command": "D:\\mingw64\\bin\\g++.exe  @CMakeFiles/minesweeper.dir/includes_CXX.rsp -g -std=gnu++20 -Winvalid-pch -include D:/Program/SDL3-minesweeper/cmake-build/CMakeFiles/minesweeper.dir/cmake_pch.hxx -o CMakeFiles\\minesweeper.dir\\src\\callback.cpp.obj -c D:\\Program\\SDL3-minesweeper\\src\\callback.cpp",
   "file": "D:/Program/SDL3-minesweeper/src/callback.cpp",
   "output": "CMakeFiles/minesweeper.dir/src/callback.cpp.obj"
 },
 {
   "directory": "D:/Program/SDL3-minesweeper/cmake-build",
-  "command": "D:\\mingw64\\bin\\g++.exe  @CMakeFiles/minesweeper.dir/includes_CXX.rsp -g -std=gnu++20 -o CMakeFiles\\minesweeper.dir\\src\\context.cpp.obj -c D:\\Program\\SDL3-minesweeper\\src\\context.cpp",
+  "command": "D:\\mingw64\\bin\\g++.exe  @CMakeFiles/minesweeper.dir/includes_CXX.rsp -g -std=gnu++20 -Winvalid-pch -include D:/Program/SDL3-minesweeper/cmake-build/CMakeFiles/minesweeper.dir/cmake_pch.hxx -o CMakeFiles\\minesweeper.dir\\src\\context.cpp.obj -c D:\\Program\\SDL3-minesweeper\\src\\context.cpp",
   "file": "D:/Program/SDL3-minesweeper/src/context.cpp",
   "output": "CMakeFiles/minesweeper.dir/src/context.cpp.obj"
 }

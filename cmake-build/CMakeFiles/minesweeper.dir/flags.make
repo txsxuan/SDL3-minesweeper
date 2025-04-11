@@ -8,3 +8,13 @@ CXX_INCLUDES = @CMakeFiles/minesweeper.dir/includes_CXX.rsp
 
 CXX_FLAGS = -g -std=gnu++20
 
+# PCH options: CMakeFiles/minesweeper.dir/cmake_pch.hxx.gch_OPTIONS = -Winvalid-pch;-x;c++-header;-include;D:/Program/SDL3-minesweeper/cmake-build/CMakeFiles/minesweeper.dir/cmake_pch.hxx
+
+# PCH options: CMakeFiles/minesweeper.dir/src/Renderer.cpp.obj_OPTIONS = -Winvalid-pch;-include;D:/Program/SDL3-minesweeper/cmake-build/CMakeFiles/minesweeper.dir/cmake_pch.hxx
+
+# PCH options: CMakeFiles/minesweeper.dir/src/Window.cpp.obj_OPTIONS = -Winvalid-pch;-include;D:/Program/SDL3-minesweeper/cmake-build/CMakeFiles/minesweeper.dir/cmake_pch.hxx
+
+# PCH options: CMakeFiles/minesweeper.dir/src/callback.cpp.obj_OPTIONS = -Winvalid-pch;-include;D:/Program/SDL3-minesweeper/cmake-build/CMakeFiles/minesweeper.dir/cmake_pch.hxx
+
+# PCH options: CMakeFiles/minesweeper.dir/src/context.cpp.obj_OPTIONS = -Winvalid-pch;-include;D:/Program/SDL3-minesweeper/cmake-build/CMakeFiles/minesweeper.dir/cmake_pch.hxx
+

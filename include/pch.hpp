@@ -1,5 +1,4 @@
-#pragma once
-#define SDL_MAIN_USE_CALLBACKS 1  /* use the callbacks instead of main() */
+#pragma once 
 #include <SDL3/SDL.h>
 #include <memory>
 #include <string>

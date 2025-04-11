@@ -1,7 +1,4 @@
 #include "Renderer.hpp"
-#include "SDL3/SDL_render.h"
-#include "Window.hpp"
-#include <stdexcept>
 Renderer::Renderer(const Window& window):renderer_(SDL_CreateRenderer(window.window_.get(),nullptr),RenderDestroy){
     if(!renderer_){
         throw std::runtime_error(std::string("Failed to initialize Renderer : ")+SDL_GetError());

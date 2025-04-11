@@ -128,6 +128,21 @@ minesweeper/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\minesweeper.dir\build.make CMakeFiles/minesweeper.dir/build
 .PHONY : minesweeper/fast
 
+# target to build an object file
+cmake_pch.hxx.gch:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\minesweeper.dir\build.make CMakeFiles/minesweeper.dir/cmake_pch.hxx.gch
+.PHONY : cmake_pch.hxx.gch
+
+# target to preprocess a source file
+cmake_pch.hxx.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\minesweeper.dir\build.make CMakeFiles/minesweeper.dir/cmake_pch.hxx.i
+.PHONY : cmake_pch.hxx.i
+
+# target to generate assembly for a file
+cmake_pch.hxx.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\minesweeper.dir\build.make CMakeFiles/minesweeper.dir/cmake_pch.hxx.s
+.PHONY : cmake_pch.hxx.s
+
 src/Renderer.obj: src/Renderer.cpp.obj
 .PHONY : src/Renderer.obj
 
@@ -233,6 +248,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... minesweeper
+	@echo ... cmake_pch.hxx.gch
+	@echo ... cmake_pch.hxx.i
+	@echo ... cmake_pch.hxx.s
 	@echo ... src/Renderer.obj
 	@echo ... src/Renderer.i
 	@echo ... src/Renderer.s
