@@ -41,7 +41,6 @@ public:
     }
 
     bool IsIn(int x, int y) const {
-        SDL_Log("x : %d , y : %d , w : %d , h : %d",x,y,w_,h_);
         return x >= 0 && x < w_ && y >= 0 && y < h_;
     }
 

@@ -47,6 +47,7 @@ struct Tile{
 using Map=Matrix<Tile>;
 
 void Mapinit(const Uint64 bombnums,Map &map,const int x,const int y);
+void Mapinit(const Uint64 bombnums,Map &map);
 void Mapinit(Map &map);
 inline auto TextureDestroy = [](SDL_Texture* texture) {
     SDL_DestroyTexture(texture);

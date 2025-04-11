@@ -31,6 +31,43 @@ void Mapinit(Map &map){
         }
     }
 }
+void Mapinit(const Uint64 bombnums,Map &map){
+    int i=0;
+    if(bombnums>=map.MaxSize()){
+        throw std::runtime_error(std::string("bombnums > = map.MaxSize()"));
+    }
+    for(i=0;i<map.MaxSize();i++){
+        map.GetByIndex(i).isCover=true;
+        map.GetByIndex(i).isflag=false;
+        if(i<bombnums){
+            map.GetByIndex(i).value=BOMB;
+        }
+        else{
+            map.GetByIndex(i).value=static_cast<Tilevalue>(0);
+        }
+    }
+    for(i=map.MaxSize()-2;i>=0;i--){
+        std::swap(map.GetByIndex(std::rand()%(i+1)).value,map.GetByIndex(i).value);
+    }
+        for(i=0;i<map.Width();i++){
+        for(int j=0;j<map.Height();j++){
+            if(map.Get(i,j).value==BOMB){
+                continue;
+            }
+            int minecount=0;
+            for(int nx=-1;nx<=1;nx++){
+                for(int ny=-1;ny<=1;ny++){
+                    int dx=i+nx;
+                    int dy=j+ny;
+                    if(map.IsIn(dx, dy)&&map.Get(dx, dy).value==BOMB){
+                        minecount++;
+                    }
+                }
+            }
+            map.Get(i,j).value=static_cast<Tilevalue>(minecount);
+        }
+    }
+}
 void Mapinit(const Uint64 bombnums,Map &map,const int x,const int y){
     int i=0;
     if(bombnums>=map.MaxSize()){
@@ -48,7 +85,7 @@ void Mapinit(const Uint64 bombnums,Map &map,const int x,const int y){
     std::swap(map.Get(x, y).value,map.GetByIndex(map.MaxSize()-1).value);
     for(i=0;i<map.Width();i++){
         for(int j=0;j<map.Height();j++){
-            if(map.Get(x,y).value==BOMB){
+            if(map.Get(i,j).value==BOMB){
                 continue;
             }
             int minecount=0;
@@ -67,7 +104,9 @@ void Mapinit(const Uint64 bombnums,Map &map,const int x,const int y){
 }
 
 
-Context::Context(Window &&window_,Renderer &&renderer_):Tilecases(LoadTexture(renderer_.renderer_.get(), "D:/Program/SDL3-minesweeper/resource/cases.bmp"),TextureDestroy),SmileImg(LoadTexture(renderer_.renderer_.get(),"D:/Program/SDL3-minesweeper/resource/smileys.bmp")),Digit( LoadTexture(renderer_.renderer_.get(),"D:/Program/SDL3-minesweeper/resource/digits.bmp")),background(LoadTexture(renderer_.renderer_.get(), "D:/Program/SDL3-minesweeper/resource/warma.jpg"),TextureDestroy),window(std::move(window_)),renderer(std::move(renderer_)),map(NGRIDX,NGRIDY){}
+Context::Context(Window &&window_,Renderer &&renderer_):Tilecases(LoadTexture(renderer_.renderer_.get(), "D:/Program/SDL3-minesweeper/resource/cases.bmp"),TextureDestroy),SmileImg(LoadTexture(renderer_.renderer_.get(),"D:/Program/SDL3-minesweeper/resource/smileys.bmp")),Digit( LoadTexture(renderer_.renderer_.get(),"D:/Program/SDL3-minesweeper/resource/digits.bmp")),background(LoadTexture(renderer_.renderer_.get(), "D:/Program/SDL3-minesweeper/resource/warma.jpg"),TextureDestroy),window(std::move(window_)),renderer(std::move(renderer_)),map(NGRIDX,NGRIDY){
+    Mapinit(NMINES,map);
+}
 
 
 SDL_AppResult Context::Init(){
@@ -84,6 +123,7 @@ SDL_AppResult Context::Init(){
             SDL_Log("%d  %d  ",WIDTH,HEIGHT);
             renderer.setScale(scale,scale);
             instance_=std::unique_ptr<Context>(new Context(std::move(window),std::move(renderer)));
+            // Mapinit(NMINES,map);
             
         }catch (const std::exception& e){
             SDL_Log("Couldn't initialize : %s",e.what());
@@ -104,12 +144,10 @@ SDL_AppResult Context::EventHandle(SDL_Event *event){
         if(mouse.Posy<OFFGRIDY){
             if(event->type==SDL_EVENT_MOUSE_BUTTON_DOWN){
                 mouse.Mstate=clickSmile;
+                SDL_Log("clickSmile !");
                 return SDL_APP_CONTINUE;
             }
         }
-        // else if(mouse.Posx<OFFGRIDX||mouse.Posy<OFFGRIDY){
-        //     return SDL_APP_CONTINUE;
-        // }
         int X=static_cast<int>((mouse.Posx-OFFGRIDX)/TileLen);
         int Y=static_cast<int>((mouse.Posy-OFFGRIDY)/TileLen);
         // SDL_Log("%f %f %d %d %d %d",mouse.Posx,mouse.Posy,OFFGRIDX,OFFGRIDY,X,Y);
@@ -131,7 +169,9 @@ SDL_AppResult Context::EventHandle(SDL_Event *event){
                 if(!map.IsIn(X,Y)){
                     return SDL_APP_CONTINUE;
                 }
-                map.Get(X,Y).isflag=!(map.Get(X,Y).isflag);
+                if(map.Get(X,Y).isCover){
+                    map.Get(X,Y).isflag=!(map.Get(X,Y).isflag);
+                }
                 mouse.Mstate=rHold;
                 SDL_Log("Right click hold !");
             }
@@ -144,7 +184,11 @@ SDL_AppResult Context::EventHandle(SDL_Event *event){
                 mouse.Pstate=mouse.Mstate;
                 mouse.Mstate=None;
             }
+            MouseHandle(X, Y);
             SDL_Log("Release buttun %d",event->button.button);
+            if(mouse.Pstate==clickSmile){
+                SDL_Log("Release smlie");
+            }
 
         }
     }
@@ -154,9 +198,7 @@ SDL_AppResult Context::Update(){
     // mouse.GetPos();
     renderer.SetColor({255,255,255,255});
     renderer.Clear(); 
-    if(state==NGaming){
-        DrawUI();
-    }
+    DrawUI();
     DrawMap();
     DrawSmile();
     // DrawBack();
@@ -260,7 +302,6 @@ void Context::DrawUI(){
     renderer.SetColor(n0xFFFFFF);
     renderer.FillRect(r);
 }
-
 void Context::DrawMap(){
     SDL_FRect srect{static_cast<float>(Tilecases->w)/16,0,static_cast<float>(Tilecases->w)/16,static_cast<float>(Tilecases->h)};
     for(int i=0;i<NGRIDX;i++){
@@ -270,7 +311,7 @@ void Context::DrawMap(){
             srect.x=static_cast<float>(Tilecases->w)/16;
             auto const &grid=map.Get(i,j);
             if(grid.isflag){
-                if(state==Explode&&grid.value==BOMB){
+                if(state==Explode&&grid.value!=BOMB){
                     srect.x*=WFLAG;
                 }else{
                     srect.x*=FLAG;
@@ -285,13 +326,13 @@ void Context::DrawMap(){
                 }
             }
             else{
-                assert(0);
                 if(state==Explode&&grid.value==BOMB){
                     srect.x*=EXPLODE;
                 }else{
                     srect.x*=static_cast<float>(grid.value);
                 }
             }
+            // srect.x+=0.2;
             renderer.DrawTexture(Tilecases.get(), srect, x, y);
         }
     }
@@ -301,7 +342,7 @@ void Context::DrawMap(){
     if(mouse.Mstate==lHold){
         int X=static_cast<int>((mouse.Posx-OFFGRIDX)/TileLen);
         int Y=static_cast<int>((mouse.Posy-OFFGRIDY)/TileLen);
-        SDL_Log("%f %f %d %d %d %d",mouse.Posx,mouse.Posy,OFFGRIDX,OFFGRIDY,X,Y);
+        // SDL_Log("%f %f %d %d %d %d",mouse.Posx,mouse.Posy,OFFGRIDX,OFFGRIDY,X,Y);
         if(!map.IsIn(X,Y)){
             return;
         }
@@ -314,14 +355,14 @@ void Context::DrawMap(){
     else if(mouse.Mstate==dHold){
         int X=static_cast<int>((mouse.Posx-OFFGRIDX)/TileLen);
         int Y=static_cast<int>((mouse.Posy-OFFGRIDY)/TileLen);
-        SDL_Log("%f %f %d %d %d %d",mouse.Posx,mouse.Posy,OFFGRIDX,OFFGRIDY,X,Y);
+        // SDL_Log("%f %f %d %d %d %d",mouse.Posx,mouse.Posy,OFFGRIDX,OFFGRIDY,X,Y);
         if(!map.IsIn(X,Y)){
             return;
         }
         for(int i=X-1;i<=X+1;i++){
             for(int j=Y-1;j<=Y+1;j++){
                 if(!map.IsIn(i,j)){
-                    SDL_Log("asdadsa");
+                    // SDL_Log("asdadsa");
                     continue;
                 }
                 auto const &grid=map.Get(i,j);
@@ -366,6 +407,13 @@ void Context::DrawSmile() {
 renderer.DrawTexture(SmileImg.get(), r,static_cast<float>(WIDTH - SmileImg.get()->h )/ 2, OFFSCORY - 1);
 }
 void Context::MouseHandle(int X,int Y){
+    if(mouse.Pstate==clickSmile){
+        state=NGaming;
+        hasREV=0;
+        Mapinit(NMINES,map);
+        SDL_Log("hint");
+        return;
+    }
     if(!map.IsIn(X,Y)){
         return;
     }
@@ -373,7 +421,42 @@ void Context::MouseHandle(int X,int Y){
     if(mouse.Pstate==lHold){
         if(state==NGaming){
             state=Gaming;
-            Mapinit(NMINES, map, X,Y);
+            if(grid.value==BOMB){
+                std::swap(map.GetByIndex(map.MaxSize()-1).value,grid.value);
+                SDL_Log("is bomb!");
+                if(grid.value==BOMB){
+                    SDL_Log("fail !");
+                }
+                int count=0;
+                for(int x=X-1;x<=X+1;x++){
+                    for(int y=Y-1;y<=Y+1;y++){
+                        if(!map.IsIn(x,y)){
+                            continue;
+                        }
+                        if(x==X&&y==Y){
+                            continue;
+                        }
+                        if(map.Get(x,y).value!=BOMB){
+                            map.Get(x,y).value=static_cast<Tilevalue>(static_cast<int>(map.Get(x,y).value)-1);
+                        }
+                        else{
+                            count++;
+                        }
+                        grid.value=static_cast<Tilevalue>(count);
+                        SDL_Log("a :%d %d %d",x,y,static_cast<int>(map.Get(x,y).value));
+                    }
+                }
+
+                for(int x=NGRIDX-2;x<NGRIDX;x++){
+                    for(int y=NGRIDY-2;y<NGRIDY;y++){
+                        if(map.Get(x,y).value!=BOMB){
+                            map.Get(x,y).value=static_cast<Tilevalue>(static_cast<int>(map.Get(x,y).value)+1);
+                        }
+                            SDL_Log("b :%d",static_cast<int>(map.Get(x,y).value));
+                    }
+                }               
+            }
+            // Mapinit(NMINES, map, X,Y);
         }
         if(!grid.isCover||grid.isflag){
             return;
@@ -382,23 +465,30 @@ void Context::MouseHandle(int X,int Y){
         
     }
     else if(mouse.Pstate==dHold){
-        if(map.Get(X,Y).isCover||grid.isflag){
+        if(grid.isCover||grid.isflag){
             return;
         }
+        int count=0;
         for(int x=X-1;x<=X+1;x++){
             for(int y=Y-1;y<=Y+1;y++){
-                floodFill(x,y);
+                if(map.IsIn(x,y)&&map.Get(x,y).isflag){
+                    count++;
+                }
+            }
+        }
+        SDL_Log("count = %d",count);
+        if(count==static_cast<int>(grid.value)){
+            for(int x=X-1;x<=X+1;x++){
+                for(int y=Y-1;y<=Y+1;y++){
+                    floodFill(x,y);
+                }
             }
         }
     }
-    else if(mouse.Pstate==clickSmile){
-        state=NGaming;
-        hasREV=0;
-        Mapinit(map);
-    }
-    if(hasREV==NMINES){
+    if((hasREV+NMINES==NGRIDX*NGRIDY)&&state==Gaming){
         state=Win;
     }
+
 }
 void Context::floodFill(int X,int Y){
     if(!map.IsIn(X,Y)){
@@ -409,6 +499,8 @@ void Context::floodFill(int X,int Y){
             return;
         }
     if(grid.value==BOMB){
+        grid.isCover=false;
+        hasREV++;
         state=Explode;
         return ;
     }
