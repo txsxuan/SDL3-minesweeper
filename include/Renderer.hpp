@@ -13,6 +13,7 @@ public:
     void DrawLine(const SDL_FPoint &p1,const SDL_FPoint& p2);
     void DrawRect(const SDL_FRect &);
     void FillRect(const SDL_FRect &);
+    void DrawTexture(SDL_Texture *texture,const SDL_FRect & srect,const SDL_FRect &drect);
     void DrawTexture(SDL_Texture *texture,const SDL_FRect & srect,float x,float y);
     void DrawTexture(SDL_Texture *texture,float x,float y);
     void DrawTexture(SDL_Texture *texture);

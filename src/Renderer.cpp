@@ -1,4 +1,5 @@
 #include "Renderer.hpp"
+#include "SDL3/SDL_rect.h"
 Renderer::Renderer(const Window& window):renderer_(SDL_CreateRenderer(window.window_.get(),nullptr),RenderDestroy){
     if(!renderer_){
         throw std::runtime_error(std::string("Failed to initialize Renderer : ")+SDL_GetError());
@@ -24,6 +25,9 @@ void Renderer::DrawRect(const SDL_FRect &r){
 }
 void Renderer::FillRect(const SDL_FRect &r){
     SDL_RenderFillRect(renderer_.get(),&r);
+}
+void Renderer::DrawTexture(SDL_Texture *texture,const SDL_FRect & srect,const SDL_FRect &drect){
+    SDL_RenderTexture(renderer_.get(),texture,&srect,&drect);
 }
 void Renderer::DrawTexture(SDL_Texture *texture,const SDL_FRect & srect,float x,float y){
     SDL_FRect drect{.x=x,.y=y,.w=srect.w,.h=srect.h};

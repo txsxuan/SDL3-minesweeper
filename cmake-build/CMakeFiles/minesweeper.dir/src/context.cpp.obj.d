@@ -13,10 +13,12 @@ CMakeFiles/minesweeper.dir/src/context.cpp.obj: \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/utility.h \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/ext/numeric_traits.h \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/bits/version.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_stdinc.h \
  D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_events.h \
  D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_init.h \
  D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_log.h \
- D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_stdinc.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_surface.h \
+ D:/Program/SDL3-minesweeper/3rdlibs/SDL3-3.2.10-mingw/x86_64-w64-mingw32/include/SDL3/SDL_timer.h \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/c++/cassert \
  D:/mingw64/x86_64-w64-mingw32/include/assert.h \
  D:/mingw64/x86_64-w64-mingw32/include/setjmp.h \
