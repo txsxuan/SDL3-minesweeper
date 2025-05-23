@@ -1,3 +1,0 @@
-D:/Program/SDL3-minesweeper/cmake-build/CMakeFiles/minesweeper.dir
-D:/Program/SDL3-minesweeper/cmake-build/CMakeFiles/edit_cache.dir
-D:/Program/SDL3-minesweeper/cmake-build/CMakeFiles/rebuild_cache.dir
