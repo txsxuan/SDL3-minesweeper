@@ -20,7 +20,7 @@ constexpr int   FLAG=10;
 constexpr int   EXPLODE=14;
 constexpr int   WFLAG=15;
 
-constexpr float scale=1;
+constexpr float scale=1.5;
 
 
 constexpr SDL_Color n0xD7D3CE{0xD7, 0xD3, 0xCE,255};

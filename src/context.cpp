@@ -68,7 +68,7 @@ void Mapinit(const Uint64 bombnums,Map &map){
 }
 
 
-Context::Context(Window &&window_,Renderer &&renderer_):Tilecases(LoadTexture(renderer_.renderer_.get(), "D:/Program/SDL3-minesweeper/resource/cases.png",false),TextureDestroy),SmileImg(LoadTexture(renderer_.renderer_.get(),"D:/Program/SDL3-minesweeper/resource/smileys.bmp")),Digit( LoadTexture(renderer_.renderer_.get(),"D:/Program/SDL3-minesweeper/resource/digits.bmp")),background(LoadTexture(renderer_.renderer_.get(), "D:/Program/SDL3-minesweeper/resource/warma.jpg",false),TextureDestroy),window(std::move(window_)),renderer(std::move(renderer_)),map(NGRIDX,NGRIDY){
+Context::Context(Window &&window_,Renderer &&renderer_):Tilecases(LoadTexture(renderer_.renderer_.get(), "./resource/cases.png",false),TextureDestroy),SmileImg(LoadTexture(renderer_.renderer_.get(),"./resource/smileys.bmp")),Digit( LoadTexture(renderer_.renderer_.get(),"./resource/digits.bmp")),background(LoadTexture(renderer_.renderer_.get(), "./resource/warma.jpg",false),TextureDestroy),window(std::move(window_)),renderer(std::move(renderer_)),map(NGRIDX,NGRIDY){
     Mapinit(NMINES,map);
     nscale=static_cast<float>(TileLen)/static_cast<float>(Tilecases->h);
 }
