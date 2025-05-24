@@ -15,20 +15,18 @@ set(SDL3_IMAGE_DIR "" CACHE PATH "Path to SDL3_image install (for Windows manual
 if(WIN32)
     set(SDL3_DLL_DIR "${SDL3_DIR}/x86_64-w64-mingw32/bin" CACHE PATH "Path to SDL3.dll")
     set(SDL3_IMAGE_DLL_DIR "${SDL3_IMAGE_DIR}/x86_64-w64-mingw32/bin" CACHE PATH "Path to SDL3_image.dll")
+    include(${SDL3_DIR}"/cmake/SDL3Config.cmake")
+    include(${SDL3_IMAGE_DIR}"/cmake/SDL3_imageConfig.cmake")
+else()
+  find_package(SDL3 CONFIG)
+  if (NOT SDL3_FOUND)
+      message(FATAL_ERROR "SDL3 not found. Please set CMAKE_PREFIX_PATH or install SDL3 properly.")
+  endif()
+  find_package(SDL3_image CONFIG)
+  if (NOT SDL3_image_FOUND)
+      message(FATAL_ERROR "SDL3_image not found. Please set CMAKE_PREFIX_PATH or install SDL3_image properly.")
+  endif()
 endif()
-
-# ===== 自动查找 SDL3 和 SDL3_image =====
-find_package(SDL3 CONFIG)
-if (NOT SDL3_FOUND)
-    message(FATAL_ERROR "SDL3 not found. Please set CMAKE_PREFIX_PATH or install SDL3 properly.")
-endif()
-
-find_package(SDL3_image CONFIG)
-if (NOT SDL3_image_FOUND)
-    message(FATAL_ERROR "SDL3_image not found. Please set CMAKE_PREFIX_PATH or install SDL3_image properly.")
-endif()
-
-
 # ===== 源码结构 =====
 aux_source_directory(src SRC)
 add_executable(minesweeper ${SRC})

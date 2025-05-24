@@ -1,0 +1,6 @@
+{
+    "cmake.configureSettings": {
+      "SDL3_DIR": "D:/Program Files/3rdlibs/SDL3-3.2.10-mingw",
+      "SDL3_IMAGE_DIR": "D:/Program Files/3rdlibs/SDL3_image-3.2.4"
+    }
+  }

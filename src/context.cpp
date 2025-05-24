@@ -440,6 +440,7 @@ void Context::MouseHandle(int X,int Y){
     if(mouse.Pstate==clickSmile){
         state=NGaming;
         hasREV=0;
+        hasflagged=0;
         Mapinit(NMINES,map);
         SDL_Log("hint");
         return;
