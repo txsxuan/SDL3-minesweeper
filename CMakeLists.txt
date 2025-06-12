@@ -71,3 +71,7 @@ add_custom_command(
     COMMENT "Copying executable to project root"
 )
 
+# on Web targets, we need CMake to generate a HTML webpage. 
+if(EMSCRIPTEN)
+  set(CMAKE_EXECUTABLE_SUFFIX ".html" CACHE INTERNAL "")
+endif()
