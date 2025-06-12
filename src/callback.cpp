@@ -1,7 +1,9 @@
+#include "SDL3/SDL_log.h"
 #include "context.hpp"
 #define SDL_MAIN_USE_CALLBACKS 1
 #include <SDL3/SDL_main.h>
 extern "C" SDL_AppResult SDL_AppInit(void **appstate, int argc, char *argv[]){
+    SDL_Log("Hello world!");
     return Context::Init();
 }
 
