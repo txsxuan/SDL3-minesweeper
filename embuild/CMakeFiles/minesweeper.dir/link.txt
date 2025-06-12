@@ -1,0 +1,1 @@
+/home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/em++  --preload-file /home/yukinisakuhana/program/SDL3-minesweeper/resources@resources -sUSE_SDL=3 -sALLOW_MEMORY_GROWTH=1 @CMakeFiles/minesweeper.dir/objects1.rsp -o minesweeper.html @CMakeFiles/minesweeper.dir/linkLibs.rsp

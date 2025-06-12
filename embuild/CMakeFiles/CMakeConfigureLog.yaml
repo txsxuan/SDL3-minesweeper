@@ -1,0 +1,266 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:228 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The target system is: Emscripten - 1 - x86
+      The host system is: Linux - 6.8.0-51-generic - x86_64
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "3rdlibs/SDL/cmake/sdlcpu.cmake:93 (try_compile)"
+      - "3rdlibs/SDL/CMakeLists.txt:82 (SDL_DetectTargetCPUArchitectures)"
+    directories:
+      source: "/home/yukinisakuhana/program/SDL3-minesweeper/embuild/3rdlibs/SDL/CMakeFiles/CMakeTmp/SDL_detect_arch/CMakeFiles/CMakeTmp"
+      binary: "/home/yukinisakuhana/program/SDL3-minesweeper/embuild/3rdlibs/SDL/CMakeFiles/CMakeTmp/SDL_detect_arch/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/emscan-deps"
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/cmake/Modules;/home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/cmake/Modules;/home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/cmake/Modules;/home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/cmake/Modules;/home/yukinisakuhana/program/SDL3-minesweeper/3rdlibs/SDL/cmake"
+    buildResult:
+      variable: "SDL_CPU_CHECK_ALL"
+      cached: true
+      stdout: |
+        Change Dir: '/home/yukinisakuhana/program/SDL3-minesweeper/embuild/3rdlibs/SDL/CMakeFiles/CMakeTmp/SDL_detect_arch/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_5b05f/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_5b05f.dir/build.make CMakeFiles/cmTC_5b05f.dir/build
+        gmake[1]: Entering directory '/home/yukinisakuhana/program/SDL3-minesweeper/embuild/3rdlibs/SDL/CMakeFiles/CMakeTmp/SDL_detect_arch/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_5b05f.dir/SDL_detect_arch.c.o
+        /home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/emcc    -MD -MT CMakeFiles/cmTC_5b05f.dir/SDL_detect_arch.c.o -MF CMakeFiles/cmTC_5b05f.dir/SDL_detect_arch.c.o.d -o CMakeFiles/cmTC_5b05f.dir/SDL_detect_arch.c.o -c /home/yukinisakuhana/program/SDL3-minesweeper/embuild/3rdlibs/SDL/CMakeFiles/CMakeTmp/SDL_detect_arch.c
+        Linking C static library libcmTC_5b05f.a
+        /usr/bin/cmake -P CMakeFiles/cmTC_5b05f.dir/cmake_clean_target.cmake
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5b05f.dir/link.txt --verbose=1
+        /home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/emar qc libcmTC_5b05f.a CMakeFiles/cmTC_5b05f.dir/SDL_detect_arch.c.o
+        /home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/emranlib libcmTC_5b05f.a
+        gmake[1]: Leaving directory '/home/yukinisakuhana/program/SDL3-minesweeper/embuild/3rdlibs/SDL/CMakeFiles/CMakeTmp/SDL_detect_arch/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCCompilerFlag.cmake:51 (cmake_check_compiler_flag)"
+      - "3rdlibs/SDL/cmake/sdlcompilers.cmake:152 (check_c_compiler_flag)"
+      - "3rdlibs/SDL/CMakeLists.txt:458 (SDL_AddCommonCompilerFlags)"
+    checks:
+      - "Performing Test COMPILER_SUPPORTS_FCOLOR_DIAGNOSTICS"
+    directories:
+      source: "/home/yukinisakuhana/program/SDL3-minesweeper/embuild/CMakeFiles/CMakeScratch/TryCompile-vXs3vk"
+      binary: "/home/yukinisakuhana/program/SDL3-minesweeper/embuild/CMakeFiles/CMakeScratch/TryCompile-vXs3vk"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/emscan-deps"
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/cmake/Modules;/home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/cmake/Modules;/home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/cmake/Modules;/home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/cmake/Modules;/home/yukinisakuhana/program/SDL3-minesweeper/3rdlibs/SDL/cmake"
+    buildResult:
+      variable: "COMPILER_SUPPORTS_FCOLOR_DIAGNOSTICS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/yukinisakuhana/program/SDL3-minesweeper/embuild/CMakeFiles/CMakeScratch/TryCompile-vXs3vk'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_940cb/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_940cb.dir/build.make CMakeFiles/cmTC_940cb.dir/build
+        gmake[1]: Entering directory '/home/yukinisakuhana/program/SDL3-minesweeper/embuild/CMakeFiles/CMakeScratch/TryCompile-vXs3vk'
+        Building C object CMakeFiles/cmTC_940cb.dir/src.c.o
+        /home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/emcc -DCOMPILER_SUPPORTS_FCOLOR_DIAGNOSTICS  -D_GNU_SOURCE=1   -fcolor-diagnostics -MD -MT CMakeFiles/cmTC_940cb.dir/src.c.o -MF CMakeFiles/cmTC_940cb.dir/src.c.o.d -o CMakeFiles/cmTC_940cb.dir/src.c.o -c /home/yukinisakuhana/program/SDL3-minesweeper/embuild/CMakeFiles/CMakeScratch/TryCompile-vXs3vk/src.c
+        Linking C executable cmTC_940cb.js
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_940cb.dir/link.txt --verbose=1
+        /home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/emcc   -D_GNU_SOURCE=1 @CMakeFiles/cmTC_940cb.dir/objects1.rsp -o cmTC_940cb.js 
+        gmake[1]: Leaving directory '/home/yukinisakuhana/program/SDL3-minesweeper/embuild/CMakeFiles/CMakeScratch/TryCompile-vXs3vk'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "3rdlibs/SDL/CMakeLists.txt:1110 (check_symbol_exists)"
+    checks:
+      - "Looking for fdatasync"
+    directories:
+      source: "/home/yukinisakuhana/program/SDL3-minesweeper/embuild/CMakeFiles/CMakeScratch/TryCompile-kiznOu"
+      binary: "/home/yukinisakuhana/program/SDL3-minesweeper/embuild/CMakeFiles/CMakeScratch/TryCompile-kiznOu"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/emscan-deps"
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/cmake/Modules;/home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/cmake/Modules;/home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/cmake/Modules;/home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/cmake/Modules;/home/yukinisakuhana/program/SDL3-minesweeper/3rdlibs/SDL/cmake"
+    buildResult:
+      variable: "HAVE_FDATASYNC"
+      cached: true
+      stdout: |
+        Change Dir: '/home/yukinisakuhana/program/SDL3-minesweeper/embuild/CMakeFiles/CMakeScratch/TryCompile-kiznOu'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_dea04/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_dea04.dir/build.make CMakeFiles/cmTC_dea04.dir/build
+        gmake[1]: Entering directory '/home/yukinisakuhana/program/SDL3-minesweeper/embuild/CMakeFiles/CMakeScratch/TryCompile-kiznOu'
+        Building C object CMakeFiles/cmTC_dea04.dir/CheckSymbolExists.c.o
+        /home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/emcc   -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_dea04.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_dea04.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_dea04.dir/CheckSymbolExists.c.o -c /home/yukinisakuhana/program/SDL3-minesweeper/embuild/CMakeFiles/CMakeScratch/TryCompile-kiznOu/CheckSymbolExists.c
+        Linking C executable cmTC_dea04.js
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dea04.dir/link.txt --verbose=1
+        /home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/emcc   -D_GNU_SOURCE=1 @CMakeFiles/cmTC_dea04.dir/objects1.rsp -o cmTC_dea04.js 
+        gmake[1]: Leaving directory '/home/yukinisakuhana/program/SDL3-minesweeper/embuild/CMakeFiles/CMakeScratch/TryCompile-kiznOu'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "3rdlibs/SDL/CMakeLists.txt:1111 (check_symbol_exists)"
+    checks:
+      - "Looking for gethostname"
+    directories:
+      source: "/home/yukinisakuhana/program/SDL3-minesweeper/embuild/CMakeFiles/CMakeScratch/TryCompile-EwQY3c"
+      binary: "/home/yukinisakuhana/program/SDL3-minesweeper/embuild/CMakeFiles/CMakeScratch/TryCompile-EwQY3c"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/emscan-deps"
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/cmake/Modules;/home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/cmake/Modules;/home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/cmake/Modules;/home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/cmake/Modules;/home/yukinisakuhana/program/SDL3-minesweeper/3rdlibs/SDL/cmake"
+    buildResult:
+      variable: "HAVE_GETHOSTNAME"
+      cached: true
+      stdout: |
+        Change Dir: '/home/yukinisakuhana/program/SDL3-minesweeper/embuild/CMakeFiles/CMakeScratch/TryCompile-EwQY3c'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f6c55/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_f6c55.dir/build.make CMakeFiles/cmTC_f6c55.dir/build
+        gmake[1]: Entering directory '/home/yukinisakuhana/program/SDL3-minesweeper/embuild/CMakeFiles/CMakeScratch/TryCompile-EwQY3c'
+        Building C object CMakeFiles/cmTC_f6c55.dir/CheckSymbolExists.c.o
+        /home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/emcc   -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_f6c55.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_f6c55.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_f6c55.dir/CheckSymbolExists.c.o -c /home/yukinisakuhana/program/SDL3-minesweeper/embuild/CMakeFiles/CMakeScratch/TryCompile-EwQY3c/CheckSymbolExists.c
+        Linking C executable cmTC_f6c55.js
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f6c55.dir/link.txt --verbose=1
+        /home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/emcc   -D_GNU_SOURCE=1 @CMakeFiles/cmTC_f6c55.dir/objects1.rsp -o cmTC_f6c55.js 
+        gmake[1]: Leaving directory '/home/yukinisakuhana/program/SDL3-minesweeper/embuild/CMakeFiles/CMakeScratch/TryCompile-EwQY3c'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "3rdlibs/SDL/CMakeLists.txt:1126 (check_symbol_exists)"
+    checks:
+      - "Looking for posix_spawn_file_actions_addchdir"
+    directories:
+      source: "/home/yukinisakuhana/program/SDL3-minesweeper/embuild/CMakeFiles/CMakeScratch/TryCompile-nAzRhC"
+      binary: "/home/yukinisakuhana/program/SDL3-minesweeper/embuild/CMakeFiles/CMakeScratch/TryCompile-nAzRhC"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/emscan-deps"
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/cmake/Modules;/home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/cmake/Modules;/home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/cmake/Modules;/home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/cmake/Modules;/home/yukinisakuhana/program/SDL3-minesweeper/3rdlibs/SDL/cmake"
+    buildResult:
+      variable: "HAVE_POSIX_SPAWN_FILE_ACTIONS_ADDCHDIR"
+      cached: true
+      stdout: |
+        Change Dir: '/home/yukinisakuhana/program/SDL3-minesweeper/embuild/CMakeFiles/CMakeScratch/TryCompile-nAzRhC'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_e3af3/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_e3af3.dir/build.make CMakeFiles/cmTC_e3af3.dir/build
+        gmake[1]: Entering directory '/home/yukinisakuhana/program/SDL3-minesweeper/embuild/CMakeFiles/CMakeScratch/TryCompile-nAzRhC'
+        Building C object CMakeFiles/cmTC_e3af3.dir/CheckSymbolExists.c.o
+        /home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/emcc   -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_e3af3.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_e3af3.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_e3af3.dir/CheckSymbolExists.c.o -c /home/yukinisakuhana/program/SDL3-minesweeper/embuild/CMakeFiles/CMakeScratch/TryCompile-nAzRhC/CheckSymbolExists.c
+        /home/yukinisakuhana/program/SDL3-minesweeper/embuild/CMakeFiles/CMakeScratch/TryCompile-nAzRhC/CheckSymbolExists.c:8:19: error: use of undeclared identifier 'posix_spawn_file_actions_addchdir'; did you mean 'posix_spawn_file_actions_addchdir_np'?
+            8 |   return ((int*)(&posix_spawn_file_actions_addchdir))[argc];
+              |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+              |                   posix_spawn_file_actions_addchdir_np
+        /home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/cache/sysroot/include/spawn.h:75:5: note: 'posix_spawn_file_actions_addchdir_np' declared here
+           75 | int posix_spawn_file_actions_addchdir_np(posix_spawn_file_actions_t *__restrict, const char *__restrict);
+              |     ^
+        1 error generated.
+        gmake[1]: *** [CMakeFiles/cmTC_e3af3.dir/build.make:79: CMakeFiles/cmTC_e3af3.dir/CheckSymbolExists.c.o] Error 1
+        gmake[1]: Leaving directory '/home/yukinisakuhana/program/SDL3-minesweeper/embuild/CMakeFiles/CMakeScratch/TryCompile-nAzRhC'
+        gmake: *** [Makefile:127: cmTC_e3af3/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "3rdlibs/SDL/CMakeLists.txt:1127 (check_symbol_exists)"
+    checks:
+      - "Looking for posix_spawn_file_actions_addchdir_np"
+    directories:
+      source: "/home/yukinisakuhana/program/SDL3-minesweeper/embuild/CMakeFiles/CMakeScratch/TryCompile-jyJ6jr"
+      binary: "/home/yukinisakuhana/program/SDL3-minesweeper/embuild/CMakeFiles/CMakeScratch/TryCompile-jyJ6jr"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/emscan-deps"
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/cmake/Modules;/home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/cmake/Modules;/home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/cmake/Modules;/home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/cmake/Modules;/home/yukinisakuhana/program/SDL3-minesweeper/3rdlibs/SDL/cmake"
+    buildResult:
+      variable: "HAVE_POSIX_SPAWN_FILE_ACTIONS_ADDCHDIR_NP"
+      cached: true
+      stdout: |
+        Change Dir: '/home/yukinisakuhana/program/SDL3-minesweeper/embuild/CMakeFiles/CMakeScratch/TryCompile-jyJ6jr'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_b38e3/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_b38e3.dir/build.make CMakeFiles/cmTC_b38e3.dir/build
+        gmake[1]: Entering directory '/home/yukinisakuhana/program/SDL3-minesweeper/embuild/CMakeFiles/CMakeScratch/TryCompile-jyJ6jr'
+        Building C object CMakeFiles/cmTC_b38e3.dir/CheckSymbolExists.c.o
+        /home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/emcc   -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_b38e3.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_b38e3.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_b38e3.dir/CheckSymbolExists.c.o -c /home/yukinisakuhana/program/SDL3-minesweeper/embuild/CMakeFiles/CMakeScratch/TryCompile-jyJ6jr/CheckSymbolExists.c
+        Linking C executable cmTC_b38e3.js
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b38e3.dir/link.txt --verbose=1
+        /home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/emcc   -D_GNU_SOURCE=1 @CMakeFiles/cmTC_b38e3.dir/objects1.rsp -o cmTC_b38e3.js 
+        gmake[1]: Leaving directory '/home/yukinisakuhana/program/SDL3-minesweeper/embuild/CMakeFiles/CMakeScratch/TryCompile-jyJ6jr'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "3rdlibs/SDL/CMakeLists.txt:3059 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_POSIX_SPAWN"
+    directories:
+      source: "/home/yukinisakuhana/program/SDL3-minesweeper/embuild/CMakeFiles/CMakeScratch/TryCompile-zcWaat"
+      binary: "/home/yukinisakuhana/program/SDL3-minesweeper/embuild/CMakeFiles/CMakeScratch/TryCompile-zcWaat"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/emscan-deps"
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/cmake/Modules;/home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/cmake/Modules;/home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/cmake/Modules;/home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/cmake/Modules;/home/yukinisakuhana/program/SDL3-minesweeper/3rdlibs/SDL/cmake"
+    buildResult:
+      variable: "HAVE_POSIX_SPAWN"
+      cached: true
+      stdout: |
+        Change Dir: '/home/yukinisakuhana/program/SDL3-minesweeper/embuild/CMakeFiles/CMakeScratch/TryCompile-zcWaat'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_493bf/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_493bf.dir/build.make CMakeFiles/cmTC_493bf.dir/build
+        gmake[1]: Entering directory '/home/yukinisakuhana/program/SDL3-minesweeper/embuild/CMakeFiles/CMakeScratch/TryCompile-zcWaat'
+        Building C object CMakeFiles/cmTC_493bf.dir/src.c.o
+        /home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/emcc -DHAVE_POSIX_SPAWN  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_493bf.dir/src.c.o -MF CMakeFiles/cmTC_493bf.dir/src.c.o.d -o CMakeFiles/cmTC_493bf.dir/src.c.o -c /home/yukinisakuhana/program/SDL3-minesweeper/embuild/CMakeFiles/CMakeScratch/TryCompile-zcWaat/src.c
+        Linking C executable cmTC_493bf.js
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_493bf.dir/link.txt --verbose=1
+        /home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/emcc   -D_GNU_SOURCE=1 @CMakeFiles/cmTC_493bf.dir/objects1.rsp -o cmTC_493bf.js 
+        wasm-ld: error: CMakeFiles/cmTC_493bf.dir/src.c.o: undefined symbol: posix_spawnp
+        emcc: error: '/home/yukinisakuhana/cmptools/emsdk/upstream/bin/wasm-ld -o cmTC_493bf.wasm CMakeFiles/cmTC_493bf.dir/src.c.o -L/home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten -L/home/yukinisakuhana/cmptools/emsdk/upstream/emscripten/src/lib -lGL-getprocaddr -lal -lhtml5 -lstubs-debug -lnoexit -lc-debug -ldlmalloc-debug -lcompiler_rt -lc++-noexcept -lc++abi-debug-noexcept -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr /tmp/tmp1ruqasnylibemscripten_js_symbols.so --strip-debug --export=emscripten_stack_get_end --export=emscripten_stack_get_free --export=emscripten_stack_get_base --export=emscripten_stack_get_current --export=emscripten_stack_init --export=_emscripten_stack_alloc --export=__wasm_call_ctors --export=_emscripten_stack_restore --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_lib_deps --export-if-defined=__stop_em_lib_deps --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=main --export-if-defined=__main_argc_argv --export-if-defined=fflush --export-table -z stack-size=65536 --no-growable-memory --initial-heap=16777216 --no-entry --stack-first --table-base=1' failed (returned 1)
+        gmake[1]: *** [CMakeFiles/cmTC_493bf.dir/build.make:101: cmTC_493bf.js] Error 1
+        gmake[1]: Leaving directory '/home/yukinisakuhana/program/SDL3-minesweeper/embuild/CMakeFiles/CMakeScratch/TryCompile-zcWaat'
+        gmake: *** [Makefile:127: cmTC_493bf/fast] Error 2
+        
+      exitCode: 2
+...
